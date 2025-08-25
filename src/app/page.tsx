@@ -21,15 +21,12 @@ export default function HomePage() {
       
       <div className="min-h-screen bg-white font-[!Manrope] overflow-x-hidden">
         {/* Navigation */}
-        <nav className={`fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100 transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
+        <nav className={`fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b
+           border-gray-100 transition-all duration-700 px-[180px]
+           ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">H</span>
-                </div>
-                <span className="font-bold text-xl">HOME IDEAS</span>
-              </div>
+              <img src="/assets/images/homeideas_logo.jpg" alt="" className='w-[150px]' />
               <div className="hidden md:flex items-center space-x-8">
                 <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Home</a>
                 <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">About</a>
