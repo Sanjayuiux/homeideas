@@ -31,3 +31,22 @@ body {
     text-wrap: balance;
   }
 }
+
+
+@keyframes orbit-inner {
+  from { transform: translate(-50%, -50%) rotate(0deg) translateX(150px) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@keyframes orbit-outer {
+  from { transform: translate(-50%, -50%) rotate(0deg) translateX(245px) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg) translateX(245px) rotate(-360deg); }
+}
+
+.orbit-inner {
+  animation: orbit-inner 10s linear infinite;
+}
+
+.orbit-outer {
+  animation: orbit-outer 20s linear infinite;
+}
