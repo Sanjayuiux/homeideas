@@ -80,7 +80,19 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="space-y-6">
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900">About Us</h2>
+                <div className="relative inline-block">
+                  <h2 className="relative z-10 text-4xl md:text-5xl font-bold text-gray-900">
+                    About Us
+                  </h2>
+                  {/* underline brush vector */}
+                  <img
+                    src="/assets/images/underline-brush.png"
+                    alt="underline"
+                    className="absolute -bottom-2 left-0 w-[220px] md:w-[260px] -z-0"
+                    style={{ filter: 'brightness(0) saturate(100%) invert(92%) sepia(30%) saturate(633%) hue-rotate(358deg) brightness(103%) contrast(104%)' }}
+                  />
+                </div>
+
                 <h3 className="text-2xl font-semibold text-gray-700">
                   Who We Are: Innovators in Digital Solutions for Design and Construction
                 </h3>
@@ -91,8 +103,9 @@ export default function HomePage() {
                   With years of experience in the industry, we understand the challenges modern businesses face and have developed comprehensive solutions that drive real results.
                 </p>
               </div>
+
               <div className="relative">
-                <img src='/assets/images/About_us.jpg'/>
+                <img src="/assets/images/About_us.jpg" alt="About Us" />
               </div>
             </div>
           </div>
