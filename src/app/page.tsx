@@ -43,9 +43,9 @@ export default function HomePage() {
               <img src="/assets/images/homeideas_logo.jpg" alt="" className='w-[150px]' />
               <div className="hidden md:flex items-center space-x-8">
                 <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Home</a>
-                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">About</a>
-                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Services</a>
-                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
+                <a href="#about" className="text-gray-600 hover:text-gray-900 transition-colors">About</a>
+                <a href="#services" className="text-gray-600 hover:text-gray-900 transition-colors">Services</a>
+                <a href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
               </div>
               <button className="bg-gray-900 text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors">
                 Get Started
@@ -87,7 +87,7 @@ export default function HomePage() {
         </section>
 
         {/* About Section */}
-        <section className="py-20">
+        <section className="py-20" id='about'>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="space-y-6">
@@ -167,7 +167,7 @@ export default function HomePage() {
           </div>
         </section>
         {/* What We Do Section */}
-        <section className="py-20 bg-[#FDF9DC] min-h-screen flex items-center">
+        <section className="py-20 bg-[#FDF9DC] min-h-screen flex items-center" id='services'>
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                   
@@ -399,7 +399,7 @@ export default function HomePage() {
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800">
+        <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800" id='contact'>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="space-y-6">
@@ -442,9 +442,9 @@ export default function HomePage() {
               <div>
                 <h3 className="font-semibold text-gray-900 mb-4">Company</h3>
                 <ul className="space-y-2 text-gray-600">
-                  <li><a href="#" className="hover:text-gray-900">About</a></li>
-                  <li><a href="#" className="hover:text-gray-900">Services</a></li>
-                  <li><a href="#" className="hover:text-gray-900">Contact</a></li>
+                  <li><a href="#about" className="hover:text-gray-900">About</a></li>
+                  <li><a href="#services" className="hover:text-gray-900">Services</a></li>
+                  <li><a href="#contact" className="hover:text-gray-900">Contact</a></li>
                 </ul>
               </div>
               <div>
