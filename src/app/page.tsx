@@ -81,13 +81,13 @@ export default function HomePage() {
                   <h2 className="relative z-10 text-4xl md:text-5xl font-bold text-gray-900">
                     About Us
                   </h2>
-                  {/* underline brush vector */}
+                  {/* underline brush vector
                   <img
                     src="/assets/icons/underline.svg"
                     alt="underline"
                     className="absolute -bottom-4 left-0 w-[220px] md:w-[260px] -z-0"
                     // style={{ filter: 'brightness(0) saturate(100%) invert(92%) sepia(30%) saturate(633%) hue-rotate(358deg) brightness(103%) contrast(104%)' }}
-                  />
+                  /> */}
                 </div>
 
                 <h3 className="text-2xl font-semibold text-gray-700">
@@ -122,11 +122,11 @@ export default function HomePage() {
                   <span className="relative z-10 text-[40px] font-semibold text-gray-900">
                     Innovate
                   </span>
-                  <img
+                  {/* <img
                     src="/assets/icons/underline.svg"
                     alt="underline"
                     className="absolute -bottom-2 left-0 w-[120px] -z-0"
-                  />
+                  /> */}
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
@@ -253,56 +253,56 @@ export default function HomePage() {
 
         {/* Enhance Section */}
         <section className="py-20 bg-gray-50">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center mb-16">
-      <div className="relative inline-block">
-        <h2 className="relative z-10 text-4xl md:text-5xl font-bold text-gray-900 mb-4 inline-block">
-          Enhance
-        </h2>
-        <img
-          src="/assets/icons/underline.svg"
-          alt="underline"
-          className="absolute top-full left-0 w-full mt-2 z-0"
-        />
-      </div>
-      <div></div>
-      <h3 className="text-2xl font-semibold text-gray-700">
-        Smarter Tools for Industry Professionals
-      </h3>
-    </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <div className="relative inline-block">
+                <h2 className="relative z-10 text-4xl md:text-5xl font-bold text-gray-900 mb-4 inline-block">
+                  Enhance
+                </h2>
+                {/* <img
+                  src="/assets/icons/underline.svg"
+                  alt="underline"
+                  className="absolute top-full left-0 w-full mt-2 z-0"
+                /> */}
+              </div>
+              <div></div>
+              <h3 className="text-2xl font-semibold text-gray-700">
+                Smarter Tools for Industry Professionals
+              </h3>
+            </div>
 
-    <div className="grid md:grid-cols-3 gap-8">
-      {[
-        {
-          icon: "/assets/icons/App_icon.svg",
-          title: "Engineering and Projects",
-          subtitle: "without Cutting-Edge Solutions Applications",
-          color: "bg-orange-500"
-        },
-        {
-          icon: "/assets/icons/mobile.svg",
-          title: "Our Comprehensive Apps",
-          subtitle: "Combined with Design and Control and Innovation",
-          color: "bg-purple-500"
-        },
-        {
-          icon: "/assets/icons/dropbox.svg",
-          title: "Unmatched Apps to Increase Your Digital Transformation and Efficiency",
-          subtitle: "",
-          color: "bg-blue-500"
-        }
-      ].map((item, index) => (
-        <div key={index} className="text-center">
-          <div className={`flex items-center justify-center mx-auto mb-4`}>
-            <img src={item.icon} alt={item.title} />
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: "/assets/icons/App_icon.svg",
+                  title: "Engineering and Projects",
+                  subtitle: "without Cutting-Edge Solutions Applications",
+                  color: "bg-orange-500"
+                },
+                {
+                  icon: "/assets/icons/mobile.svg",
+                  title: "Our Comprehensive Apps",
+                  subtitle: "Combined with Design and Control and Innovation",
+                  color: "bg-purple-500"
+                },
+                {
+                  icon: "/assets/icons/dropbox.svg",
+                  title: "Unmatched Apps to Increase Your Digital Transformation and Efficiency",
+                  subtitle: "",
+                  color: "bg-blue-500"
+                }
+              ].map((item, index) => (
+                <div key={index} className="text-center">
+                  <div className={`flex items-center justify-center mx-auto mb-4`}>
+                    <img src={item.icon} alt={item.title} />
+                  </div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h4>
+                  {item.subtitle && <p className="text-gray-600">{item.subtitle}</p>}
+                </div>
+              ))}
+            </div>
           </div>
-          <h4 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h4>
-          {item.subtitle && <p className="text-gray-600">{item.subtitle}</p>}
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
+        </section>      
 
 
         {/* Testimonial Section */}
@@ -318,11 +318,11 @@ export default function HomePage() {
                   <h2 className="relative z-10 text-4xl font-bold text-gray-900 inline-block">
                     Testimonials
                   </h2>
-                  <img
+                  {/* <img
                     src="/assets/icons/underline.svg"
                     alt="underline"
                     className="absolute top-full left-0 w-full mt-2 z-0"
-                  />
+                  /> */}
                 </div>
 
                 <div className="flex mb-4">
