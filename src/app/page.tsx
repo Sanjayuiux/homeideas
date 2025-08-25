@@ -47,10 +47,15 @@ export default function HomePage() {
         <section className="pt-24 pb-16 bg-gradient-to-br from-yellow-50 to-orange-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className={`text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-                Innovating the Future of<br />
-                Business with Smart<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
+              <h1
+                className={`font-bold text-gray-900 mb-6 transition-all duration-1000 delay-300 ${
+                  isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                }`}
+              >
+                <span className="block text-[50px] leading-tight">
+                  Innovating the Future of Business with Smart
+                </span>
+                <span className="block text-[62px] leading-tight text-[#B59F0E]">
                   Home Tech Apps
                 </span>
               </h1>
@@ -264,6 +269,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="relative">
+
                 <img src='/assets/images/testimonial.jpg'/>
               </div>
               <div className="space-y-6">
