@@ -188,24 +188,24 @@ export default function HomePage() {
               {[
                 {
                   title: "Experience Seamless Integration of Technology in Your Workflow",
-                  image: "💻",
+                  image: "/assets/images/b1.jpg",
                   description: "Streamline your processes with our cutting-edge solutions."
                 },
                 {
                   title: "Harness Advanced Responsive Technology for Your Business",
-                  image: "📱",
+                  image: "/assets/images/b2.jpg",
                   description: "Mobile-first approach ensuring accessibility everywhere."
                 },
                 {
                   title: "Future-Ready Technology That Grows with Your Business",
-                  image: "🚀",
+                  image: "/assets/images/b3.jpg",
                   description: "Scalable solutions designed for sustainable growth."
                 }
               ].map((item, index) => (
                 <div key={index} className="group">
                   <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                     <div className="w-full h-48 bg-gray-100 rounded-xl flex items-center justify-center mb-6">
-                      <img src='/assets/images/b1.jpg'/>
+                      <img src={`${item.image}`}/>
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-500 transition-colors">
                       {item.title}
@@ -240,21 +240,21 @@ export default function HomePage() {
                   color: "bg-orange-500"
                 },
                 {
-                  icon: "📊",
+                  icon: "/assets/icons/mobile.svg",
                   title: "Our Comprehensive Apps",
                   subtitle: "Combined with Design and Control and Innovation",
                   color: "bg-purple-500"
                 },
                 {
-                  icon: "⚡",
+                  icon: "/assets/icons/dropbox.svg",
                   title: "Unmatched Apps to Increase Your Digital Transformation and Efficiency",
                   subtitle: "",
                   color: "bg-blue-500"
                 }
               ].map((item, index) => (
                 <div key={index} className="text-center">
-                  <div className={`w-16 h-16 ${item.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                    <span className="text-2xl">{item.icon}</span>
+                  <div className={`flex items-center justify-center mx-auto mb-4`}>
+                    <img src={item.icon} alt="" />
                   </div>
                   <h4 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h4>
                   {item.subtitle && <p className="text-gray-600">{item.subtitle}</p>}
@@ -312,9 +312,9 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="relative">
-                <div className="w-full h-80 bg-gray-700 rounded-2xl flex items-center justify-center">
+                <div className="w-full object-cover h-full bg-gray-700 rounded-2xl flex items-center justify-center">
                   <div className="text-6xl">
-                    <img src='/assets/images/cta.jpg'/>
+                    <img src='/assets/images/cta.jpg' className='rounded-[18px]'/>
                   </div>
                 </div>
               </div>
