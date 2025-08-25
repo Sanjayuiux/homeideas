@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import { ChevronRight, Play, Star, Users, Zap, Shield,
    Smartphone, Code, Database, Globe, Cloud, Cpu, Target, BarChart3 } from 'lucide-react'
+import Navigation from './components/Nav'
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false)
@@ -35,24 +36,7 @@ export default function HomePage() {
       
       <div className="min-h-screen bg-white font-[!Manrope] overflow-x-hidden">
         {/* Navigation */}
-        <nav className={`fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b
-           border-gray-100 transition-all duration-700 px-[180px]
-           ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
-              <img src="/assets/images/homeideas_logo.jpg" alt="" className='w-[150px]' />
-              <div className="hidden md:flex items-center space-x-8">
-                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Home</a>
-                <a href="#about" className="text-gray-600 hover:text-gray-900 transition-colors">About</a>
-                <a href="#services" className="text-gray-600 hover:text-gray-900 transition-colors">Services</a>
-                <a href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
-              </div>
-              <button className="bg-gray-900 text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors">
-                Get Started
-              </button>
-            </div>
-          </div>
-        </nav>
+        <Navigation/>
 
         {/* Hero Section */}
         <section className="pt-24 pb-16 bg-gradient-to-br from-yellow-50 to-orange-50">
