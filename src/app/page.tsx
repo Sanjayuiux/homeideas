@@ -2,11 +2,25 @@
 
 import { useState, useEffect } from 'react'
 import Head from 'next/head'
-import { ChevronRight, Play, Star, Users, Zap, Shield, Smartphone, Code, Database } from 'lucide-react'
+import { ChevronRight, Play, Star, Users, Zap, Shield,
+   Smartphone, Code, Database, Globe, Cloud, Cpu, Target, BarChart3 } from 'lucide-react'
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false)
-
+  const orbitingIcons = [
+      // Inner orbit - 4 icons at cardinal positions (0°, 90°, 180°, 270°)
+      { icon: Code, color: 'bg-green-500', position: 'inner', angle: 0 },     // Top
+      { icon: Database, color: 'bg-blue-500', position: 'inner', angle: 90 },  // Right
+      { icon: Shield, color: 'bg-red-400', position: 'inner', angle: 180 },   // Bottom
+      { icon: Globe, color: 'bg-blue-400', position: 'inner', angle: 270 },   // Left
+      
+      // Outer orbit - 5 icons at plus positions (45°, 135°, 225°, 315°) + one extra
+      { icon: Users, color: 'bg-orange-400', position: 'outer', angle: 45 },
+      { icon: BarChart3, color: 'bg-red-500', position: 'outer', angle: 135 },
+      { icon: Target, color: 'bg-green-400', position: 'outer', angle: 225 },
+      { icon: Smartphone, color: 'bg-orange-500', position: 'outer', angle: 315 },
+      { icon: Play, color: 'bg-blue-400', position: 'outer', angle: 0 }  // Extra icon
+    ];
   useEffect(() => {
     setIsVisible(true)
   }, [])
@@ -153,45 +167,86 @@ export default function HomePage() {
           </div>
         </section>
         {/* What We Do Section */}
-        <section className="py-20 bg-gradient-to-br from-green-50 to-yellow-50 relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What We Do</h2>
-              <h3 className="text-2xl font-semibold text-gray-700 mb-6">
-                Empowering Professionals with Innovative, Scalable Technology Solutions
-              </h3>
-            </div>
-            
-            <div className="relative">
-              {/* Central Hub */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-32 h-32 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
-                  <Zap className="w-12 h-12 text-white" />
+        <section className="py-20 bg-[#FDF9DC] min-h-screen flex items-center">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                  
+                  {/* Content Side */}
+                  <div className="space-y-8 max-w-lg">
+                    <div className="space-y-6">
+                      <div>
+                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                          What We Do
+                        </h2>
+                        <div className="w-16 h-1 bg-orange-400 mt-2"></div>
+                      </div>
+                      
+                      <h3 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">
+                        Empowering Professionals with Innovative, Scalable Solutions for the Future
+                      </h3>
+                      
+                      <p className="text-black/40 leading-relaxed text-lg">
+                        We provide design and construction professionals with 
+                        smart solutions that enhance productivity and streamline 
+                        workflows for design and construction professionals. Our 
+                        mission is to empower you with tools that adapt to your 
+                        needs and drive success.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  {/* Planetary Animation Side */}
+                  <div className="relative flex items-center justify-center h-[500px] lg:h-[600px]">
+                    
+                    {/* Central Hub */}
+                    <div className="relative z-10 w-20 h-20 bg-white rounded-xl flex items-center justify-center shadow-lg">
+                      <Zap className="w-10 h-10 text-yellow-500" />
+                    </div>
+                    
+                    {/* Dashed Orbit Rings */}
+                    <div 
+                      className="absolute w-[310px] h-[310px] rounded-full border-2 border-dashed border-[#544A07]"
+                      style={{
+                        borderStyle: 'dashed',
+                        borderWidth: '2px'
+                      }}
+                    ></div>
+                    <div 
+                      className="absolute w-[490px] h-[490px] rounded-full border-2 border-dashed border-[#544A07]"
+                      style={{
+                        borderStyle: 'dashed',
+                        borderWidth: '2px'
+                      }}
+                    ></div>
+                    
+                    {/* Orbiting Icons */}
+                    {orbitingIcons.map((planet, index) => {
+                      const radian = (planet.angle * Math.PI) / 180;
+                      
+                      return (
+                        <div
+                          key={index}
+                          className={`absolute w-12 h-12 ${planet.color} rounded-full flex items-center justify-center shadow-lg z-20 ${
+                            planet.position === 'inner' ? 'orbit-inner' : 'orbit-outer'
+                          }`}
+                          style={{
+                            left: '50%',
+                            top: '50%',
+                            animationDelay: `${index * 2}s`,
+                            transform: `translate(-50%, -50%) rotate(${planet.angle}deg) translateX(${
+                              planet.position === 'inner' ? '150px' : '200px'
+                            }) rotate(-${planet.angle}deg)`
+                          }}
+                        >
+                          <planet.icon className="w-6 h-6 text-white" />
+                        </div>
+                      );
+                    })}
+                  </div>
+                  
                 </div>
               </div>
-              
-              {/* Floating Icons */}
-              <div className="relative h-96">
-                {[
-                  { icon: Users, color: 'bg-blue-500', position: 'top-0 left-1/4' },
-                  { icon: Code, color: 'bg-green-500', position: 'top-0 right-1/4' },
-                  { icon: Shield, color: 'bg-purple-500', position: 'top-1/2 left-0' },
-                  { icon: Database, color: 'bg-red-500', position: 'top-1/2 right-0' },
-                  { icon: Smartphone, color: 'bg-indigo-500', position: 'bottom-0 left-1/3' },
-                  { icon: Play, color: 'bg-pink-500', position: 'bottom-0 right-1/3' },
-                ].map((item, index) => (
-                  <div
-                    key={index}
-                    className={`absolute w-16 h-16 ${item.color} rounded-full flex items-center justify-center ${item.position} animate-pulse`}
-                    style={{ animationDelay: `${index * 0.5}s` }}
-                  >
-                    <item.icon className="w-8 h-8 text-white" />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+            </section>
 
         {/* Smart Solutions Section */}
        <section className="py-20 relative">
