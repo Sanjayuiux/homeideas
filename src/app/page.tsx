@@ -98,13 +98,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="relative">
-                <div className="bg-gradient-to-br from-yellow-100 to-orange-100 rounded-3xl p-8">
-                  <div className="bg-white rounded-2xl p-6 shadow-lg">
-                    <div className="w-full h-96 bg-gray-100 rounded-xl flex items-center justify-center">
-                      <Smartphone className="w-24 h-24 text-gray-400" />
-                    </div>
-                  </div>
-                </div>
+                <img src='/assets/images/Innovate.jpg'/>
               </div>
               <div className="space-y-6">
                 <div className="inline-block bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full text-sm font-semibold">
@@ -206,7 +200,7 @@ export default function HomePage() {
                 <div key={index} className="group">
                   <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                     <div className="w-full h-48 bg-gray-100 rounded-xl flex items-center justify-center mb-6">
-                      <span className="text-6xl">{item.image}</span>
+                      <img src='/assets/images/b1.jpg'/>
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-500 transition-colors">
                       {item.title}
@@ -235,7 +229,7 @@ export default function HomePage() {
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
-                  icon: "🔧",
+                  icon: "/assets/icons/App_icon.svg",
                   title: "Engineering and Projects",
                   subtitle: "without Cutting-Edge Solutions Applications",
                   color: "bg-orange-500"
@@ -270,10 +264,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="relative">
-                <div className="w-full h-96 bg-gray-200 rounded-2xl flex items-center justify-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-300 to-gray-400"></div>
-                  <Play className="w-16 h-16 text-white relative z-10 bg-black/50 rounded-full p-4" />
-                </div>
+                <img src='/assets/images/testimonial.jpg'/>
               </div>
               <div className="space-y-6">
                 <h2 className="text-4xl font-bold text-gray-900">Testimonials</h2>
@@ -316,7 +307,9 @@ export default function HomePage() {
               </div>
               <div className="relative">
                 <div className="w-full h-80 bg-gray-700 rounded-2xl flex items-center justify-center">
-                  <div className="text-6xl">💻</div>
+                  <div className="text-6xl">
+                    <img src='/assets/images/cta.jpg'/>
+                  </div>
                 </div>
               </div>
             </div>
