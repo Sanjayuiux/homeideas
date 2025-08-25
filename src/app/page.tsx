@@ -87,17 +87,7 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="relative">
-                <div className="bg-gradient-to-br from-blue-900 to-blue-700 rounded-3xl p-8 relative overflow-hidden">
-                  <div className="absolute top-4 right-4 w-20 h-20 bg-blue-400 rounded-full opacity-20"></div>
-                  <div className="absolute bottom-4 left-4 w-12 h-12 bg-blue-300 rounded-full opacity-30"></div>
-                  <div className="text-center text-white">
-                    <div className="w-24 h-24 bg-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                      <Database className="w-12 h-12" />
-                    </div>
-                    <h4 className="text-xl font-semibold mb-2">Smart Technology</h4>
-                    <p className="text-blue-100">Powered by AI and machine learning</p>
-                  </div>
-                </div>
+                <img src='/assets/images/About_us.jpg'/>
               </div>
             </div>
           </div>
