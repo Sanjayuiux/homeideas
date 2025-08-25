@@ -26,12 +26,7 @@ export default function HomePage() {
            ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">H</span>
-                </div>
-                <span className="font-bold text-xl">HOME IDEAS</span>
-              </div>
+              <img src="/assets/images/homeideas_logo.jpg" alt="" className='w-[150px]' />
               <div className="hidden md:flex items-center space-x-8">
                 <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Home</a>
                 <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">About</a>
