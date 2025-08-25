@@ -21,7 +21,9 @@ export default function HomePage() {
       
       <div className="min-h-screen bg-white font-[!Manrope] overflow-x-hidden">
         {/* Navigation */}
-        <nav className={`fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100 transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
+        <nav className={`fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b
+           border-gray-100 transition-all duration-700 px-[180px]
+           ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               <div className="flex items-center space-x-2">
