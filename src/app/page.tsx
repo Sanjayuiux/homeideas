@@ -256,11 +256,11 @@ export default function HomePage() {
         <h2 className="relative z-10 text-4xl md:text-5xl font-bold text-gray-900 mb-4 inline-block">
           Smart Solutions, Real Impact
         </h2>
-        <img
+        {/* <img
           src="/assets/icons/underline.svg"
           alt="underline"
           className="absolute top-full left-0 w-full mt-1 z-0"
-        />
+        /> */}
       </div>
     </div>
 
@@ -314,11 +314,11 @@ export default function HomePage() {
         <h2 className="relative z-10 text-4xl md:text-5xl font-bold text-gray-900 mb-4 inline-block">
           Enhance
         </h2>
-        <img
+        {/* <img
           src="/assets/icons/underline.svg"
           alt="underline"
           className="absolute top-full left-0 w-full mt-2 z-0"
-        />
+        /> */}
       </div>
       <div></div>
       <h3 className="text-2xl font-semibold text-gray-700">
@@ -373,11 +373,11 @@ export default function HomePage() {
           <h2 className="relative z-10 text-4xl font-bold text-gray-900 inline-block">
             Testimonials
           </h2>
-          <img
+          {/* <img
             src="/assets/icons/underline.svg"
             alt="underline"
             className="absolute top-full left-0 w-full mt-2 z-0"
-          />
+          /> */}
         </div>
 
                 <div className="flex mb-4">
