@@ -83,10 +83,10 @@ export default function HomePage() {
                   </h2>
                   {/* underline brush vector */}
                   <img
-                    src="/assets/images/underline-brush.png"
+                    src="/assets/icons/underline.svg"
                     alt="underline"
-                    className="absolute -bottom-2 left-0 w-[220px] md:w-[260px] -z-0"
-                    style={{ filter: 'brightness(0) saturate(100%) invert(92%) sepia(30%) saturate(633%) hue-rotate(358deg) brightness(103%) contrast(104%)' }}
+                    className="absolute -bottom-4 left-0 w-[220px] md:w-[260px] -z-0"
+                    // style={{ filter: 'brightness(0) saturate(100%) invert(92%) sepia(30%) saturate(633%) hue-rotate(358deg) brightness(103%) contrast(104%)' }}
                   />
                 </div>
 
@@ -108,25 +108,37 @@ export default function HomePage() {
           </div>
         </section>
 
+
         {/* Innovation Section */}
         <section className="py-20 bg-gradient-to-br from-yellow-50 to-orange-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="relative">
-                <img src='/assets/images/Innovate.jpg'/>
+                <img src="/assets/images/Innovate.jpg" />
               </div>
               <div className="space-y-6">
-                <div className="inline-block bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full text-sm font-semibold">
-                  Innovate
+                {/* Innovate heading with underline */}
+                <div className="relative inline-block">
+                  <span className="relative z-10 text-[40px] font-semibold text-gray-900">
+                    Innovate
+                  </span>
+                  <img
+                    src="/assets/icons/underline.svg"
+                    alt="underline"
+                    className="absolute -bottom-2 left-0 w-[120px] -z-0"
+                  />
                 </div>
+
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
                   Transforming Workflows with Innovative Applications
                 </h2>
                 <p className="text-gray-600 leading-relaxed">
-                  Our innovative applications are designed to streamline your business processes, increase productivity, and drive growth. Experience the future of business management today.
+                  Our innovative applications are designed to streamline your business processes,
+                  increase productivity, and drive growth. Experience the future of business management today.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  From project management to customer relations, our solutions integrate seamlessly with your existing workflows while providing advanced features that set you apart from the competition.
+                  From project management to customer relations, our solutions integrate seamlessly
+                  with your existing workflows while providing advanced features that set you apart from the competition.
                 </p>
                 <div className="flex gap-4">
                   <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
@@ -140,7 +152,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
         {/* What We Do Section */}
         <section className="py-20 bg-gradient-to-br from-green-50 to-yellow-50 relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
