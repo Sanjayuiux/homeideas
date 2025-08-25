@@ -19,7 +19,7 @@ export default function HomePage() {
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
       </Head>
       
-      <div className="min-h-screen bg-white font-[Manrope] overflow-x-hidden">
+      <div className="min-h-screen bg-white font-[!Manrope] overflow-x-hidden">
         {/* Navigation */}
         <nav className={`fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100 transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
