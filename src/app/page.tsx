@@ -1,344 +1,384 @@
 'use client'
-import { motion } from "framer-motion";
-import Head from "next/head";
 
-// Placeholder images
-const placeholder =
-  "https://via.placeholder.com/600x400.png?text=Image+Placeholder";
+import { useState, useEffect } from 'react'
+import Head from 'next/head'
+import { ChevronRight, Play, Star, Users, Zap, Shield, Smartphone, Code, Database } from 'lucide-react'
 
-export default function HomeIdeas() {
+export default function HomePage() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
+
   return (
     <>
       <Head>
-        <title>Home Ideas | Smart Tech for Construction</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap"
-          rel="stylesheet"
-        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
       </Head>
-      <main className="font-manrope text-gray-800 bg-gradient-to-b from-yellow-50 to-white min-h-screen">
-        {/* Header */}
-        <header className="px-4 sm:px-8 py-4 flex justify-between items-center bg-white shadow-sm">
-          <motion.div initial={{ x: -20, opacity: 0 }} animate={{ x: 0, opacity: 1 }}>
-            <span className="font-extrabold text-xl text-yellow-500">HOME IDEAS</span>
-          </motion.div>
-          <nav className="hidden sm:flex space-x-8 font-semibold text-sm">
-            <a href="#home" className="hover:text-yellow-500 transition">Home</a>
-            <a href="#apps" className="hover:text-yellow-500 transition">Apps</a>
-            <a href="#contact" className="hover:text-yellow-500 transition">Contact</a>
-          </nav>
-          <motion.button
-            whileHover={{ scale: 1.08 }}
-            className="bg-yellow-400 text-white px-5 py-2 rounded shadow-md font-medium hover:bg-yellow-500 transition ml-4"
-          >
-            Get Started
-          </motion.button>
-        </header>
+      
+      <div className="min-h-screen bg-white font-[Manrope] overflow-x-hidden">
+        {/* Navigation */}
+        <nav className={`fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100 transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-16">
+              <div className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">H</span>
+                </div>
+                <span className="font-bold text-xl">HOME IDEAS</span>
+              </div>
+              <div className="hidden md:flex items-center space-x-8">
+                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Home</a>
+                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">About</a>
+                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Services</a>
+                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
+              </div>
+              <button className="bg-gray-900 text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors">
+                Get Started
+              </button>
+            </div>
+          </div>
+        </nav>
 
         {/* Hero Section */}
-        <section className="relative z-0 flex flex-col items-center text-center py-16 px-4 bg-gradient-to-tr from-yellow-100 to-white">
-          <motion.h1
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="text-3xl sm:text-5xl font-bold leading-tight mb-3"
-          >
-            Innovating the Future of <br />
-            Business with Smart
-            <span className="block text-yellow-500 mt-2">Home Tech Apps</span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.45 }}
-            className="text-base sm:text-lg text-gray-700 mb-5 max-w-xl"
-          >
-            We simplify processes for architects, engineers, and interior designers, enabling them to focus on creativity and efficiency with cutting-edge digital solutions.
-          </motion.p>
-          <div className="flex space-x-4 justify-center">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              className="bg-yellow-500 text-white px-8 py-2 rounded font-semibold shadow-lg"
-            >
-              Explore the App
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              className="bg-gray-100 text-gray-700 px-8 py-2 rounded font-semibold border border-gray-200 shadow"
-            >
-              Get In Touch
-            </motion.button>
-          </div>
-        </section>
-
-
-        {/* About Us Section */}
-        <section className="py-12 px-4 sm:px-12 grid md:grid-cols-2 gap-10 items-center bg-white" id="about">
-          <div>
-            <motion.h3
-              initial={{ x: -20, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              className="text-yellow-500 font-bold text-lg mb-2"
-            >
-              About Us
-            </motion.h3>
-            <h2 className="text-2xl font-semibold mb-2">
-              Who We Are: Innovators in Digital Solutions for Design and Construction
-            </h2>
-            <p className="text-gray-600">
-              HomeIdeas Technologies empowers professionals to achieve new productivity and design heights. By harnessing the power of mobile and cloud solutions, we make teamwork, project management, and design iteration seamless, efficient, and modern.
-            </p>
-          </div>
-          <motion.img
-            src={placeholder}
-            alt="About Illustration"
-            className="rounded-xl w-full shadow-lg object-cover"
-            initial={{ scale: 0.95, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ type: "spring", duration: 0.6 }}
-            viewport={{ once: true }}
-          />
-        </section>
-
-        {/* Innovate Section */}
-        <section className="py-12 px-4 sm:px-12 bg-yellow-50 rounded-xl mx-2 sm:mx-8 my-6">
-          <div className="flex flex-col md:flex-row items-center md:space-x-10">
-            <motion.div
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              className="flex-1 mb-6 md:mb-0"
-            >
-              <img
-                src={placeholder}
-                alt="Mobile App Illustration"
-                className="rounded-xl w-full shadow-md object-cover"
-              />
-            </motion.div>
-            <div className="flex-1">
-              <h3 className="text-yellow-500 font-bold text-lg mb-2">Innovate</h3>
-              <h2 className="text-2xl font-semibold mb-3">
-                Transforming Workflows <br /> with Innovative Applications
-              </h2>
-              <p className="text-gray-700 mb-3">
-                We empower professionals with top-quality applications to streamline daily operations, reduce delays, and improve collaboration. Our solutions are built for scalability, adaptability, and user delight.
+        <section className="pt-24 pb-16 bg-gradient-to-br from-yellow-50 to-orange-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className={`text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+                Innovating the Future of<br />
+                Business with Smart<br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
+                  Home Tech Apps
+                </span>
+              </h1>
+              <p className={`text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+                Unlock business potential with cutting-edge solutions that are designed to make your workflow smarter, faster, and more efficient than ever before.
               </p>
-              <div className="flex space-x-4">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  className="bg-yellow-500 text-white px-6 py-2 rounded font-semibold"
-                >
-                  Explore Our Apps
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  className="bg-gray-100 text-gray-800 px-6 py-2 rounded font-semibold border border-gray-200"
-                >
-                  Get in Touch
-                </motion.button>
+              <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+                <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center">
+                  Get Started Today
+                  <ChevronRight className="ml-2 w-5 h-5" />
+                </button>
+                <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold border-2 border-gray-200 hover:border-gray-300 transition-colors">
+                  Watch Demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="space-y-6">
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900">About Us</h2>
+                <h3 className="text-2xl font-semibold text-gray-700">
+                  Who We Are: Innovators in Digital Solutions for Design and Construction
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  We are a team of passionate innovators dedicated to revolutionizing the way businesses operate through cutting-edge technology solutions. Our expertise spans across digital transformation, smart applications, and innovative workflow optimization.
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  With years of experience in the industry, we understand the challenges modern businesses face and have developed comprehensive solutions that drive real results.
+                </p>
+              </div>
+              <div className="relative">
+                <div className="bg-gradient-to-br from-blue-900 to-blue-700 rounded-3xl p-8 relative overflow-hidden">
+                  <div className="absolute top-4 right-4 w-20 h-20 bg-blue-400 rounded-full opacity-20"></div>
+                  <div className="absolute bottom-4 left-4 w-12 h-12 bg-blue-300 rounded-full opacity-30"></div>
+                  <div className="text-center text-white">
+                    <div className="w-24 h-24 bg-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+                      <Database className="w-12 h-12" />
+                    </div>
+                    <h4 className="text-xl font-semibold mb-2">Smart Technology</h4>
+                    <p className="text-blue-100">Powered by AI and machine learning</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Innovation Section */}
+        <section className="py-20 bg-gradient-to-br from-yellow-50 to-orange-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="relative">
+                <div className="bg-gradient-to-br from-yellow-100 to-orange-100 rounded-3xl p-8">
+                  <div className="bg-white rounded-2xl p-6 shadow-lg">
+                    <div className="w-full h-96 bg-gray-100 rounded-xl flex items-center justify-center">
+                      <Smartphone className="w-24 h-24 text-gray-400" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-6">
+                <div className="inline-block bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full text-sm font-semibold">
+                  Innovate
+                </div>
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+                  Transforming Workflows with Innovative Applications
+                </h2>
+                <p className="text-gray-600 leading-relaxed">
+                  Our innovative applications are designed to streamline your business processes, increase productivity, and drive growth. Experience the future of business management today.
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  From project management to customer relations, our solutions integrate seamlessly with your existing workflows while providing advanced features that set you apart from the competition.
+                </p>
+                <div className="flex gap-4">
+                  <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                    Learn More
+                  </button>
+                  <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold border-2 border-gray-200 hover:border-gray-300 transition-colors">
+                    View Demo
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* What We Do Section */}
-        <section className="py-12 px-4 sm:px-12 grid md:grid-cols-2 gap-10 items-center" id="whatwedo">
-          <div>
-            <h3 className="text-yellow-500 font-bold text-lg mb-2">What We Do</h3>
-            <h2 className="text-2xl font-semibold mb-2">
-              Empowering Professionals with Innovative, Scalable Solutions for the Future
-            </h2>
-            <p className="text-gray-600">
-              Our technology integrates effortlessly into professional workflows, saving time and fostering creativity through automation, seamless communication, and data-driven insights.
-            </p>
+        <section className="py-20 bg-gradient-to-br from-green-50 to-yellow-50 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What We Do</h2>
+              <h3 className="text-2xl font-semibold text-gray-700 mb-6">
+                Empowering Professionals with Innovative, Scalable Technology Solutions
+              </h3>
+            </div>
+            
+            <div className="relative">
+              {/* Central Hub */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-32 h-32 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
+                  <Zap className="w-12 h-12 text-white" />
+                </div>
+              </div>
+              
+              {/* Floating Icons */}
+              <div className="relative h-96">
+                {[
+                  { icon: Users, color: 'bg-blue-500', position: 'top-0 left-1/4' },
+                  { icon: Code, color: 'bg-green-500', position: 'top-0 right-1/4' },
+                  { icon: Shield, color: 'bg-purple-500', position: 'top-1/2 left-0' },
+                  { icon: Database, color: 'bg-red-500', position: 'top-1/2 right-0' },
+                  { icon: Smartphone, color: 'bg-indigo-500', position: 'bottom-0 left-1/3' },
+                  { icon: Play, color: 'bg-pink-500', position: 'bottom-0 right-1/3' },
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className={`absolute w-16 h-16 ${item.color} rounded-full flex items-center justify-center ${item.position} animate-pulse`}
+                    style={{ animationDelay: `${index * 0.5}s` }}
+                  >
+                    <item.icon className="w-8 h-8 text-white" />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-          <motion.img
-            src={placeholder}
-            alt="What We Do Illustration"
-            className="w-full max-w-xs mx-auto md:mx-0 rounded-full"
-            initial={{ rotate: -10, opacity: 0 }}
-            whileInView={{ rotate: 0, opacity: 1 }}
-            transition={{ type: "spring", duration: 0.6 }}
-            viewport={{ once: true }}
-          />
         </section>
 
-        {/* Solutions Section */}
-        <section className="py-12 bg-white">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-semibold mb-2">
-              Smart Solutions, Real Impact
-            </h2>
-            <p className="text-gray-600 font-medium">
-              Why Professionals Choose Homeideas<br />
-              For Their Business Solutions
-            </p>
-          </div>
-          <div className="flex flex-col md:flex-row gap-8 px-4 sm:px-12">
-            <motion.div
-              whileHover={{ scale: 1.03, boxShadow: "0 0 0 3px #fde68a44" }}
-              className="bg-gray-50 p-6 rounded-xl flex-1 shadow-sm border border-yellow-50"
-            >
-              <img src={placeholder} alt="Seamless Integration" className="rounded mb-3 w-full h-32 object-cover" />
-              <h3 className="font-bold text-lg mb-1">Experience Seamless Integration</h3>
-              <p className="text-gray-600 text-sm">
-                Incorporate technology into your workflow without disrupting your business.
+        {/* Smart Solutions Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Smart Solutions, Real Impact
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Why Professionals Choose HomeIdeas for Their Business Solutions
               </p>
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.03, boxShadow: "0 0 0 3px #fde68a44" }}
-              className="bg-gray-50 p-6 rounded-xl flex-1 shadow-sm border border-yellow-50"
-            >
-              <img src={placeholder} alt="Tailored Solutions" className="rounded mb-3 w-full h-32 object-cover" />
-              <h3 className="font-bold text-lg mb-1">Tailored Solutions</h3>
-              <p className="text-gray-600 text-sm">
-                Apps designed for your unique architectural and construction needs.
-              </p>
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.03, boxShadow: "0 0 0 3px #fde68a44" }}
-              className="bg-gray-50 p-6 rounded-xl flex-1 shadow-sm border border-yellow-50"
-            >
-              <img src={placeholder} alt="Future Ready Technology" className="rounded mb-3 w-full h-32 object-cover" />
-              <h3 className="font-bold text-lg mb-1">Future-Ready Technology</h3>
-              <p className="text-gray-600 text-sm">
-                Solutions that scale and evolve with your business, today and tomorrow.
-              </p>
-            </motion.div>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "Experience Seamless Integration of Technology in Your Workflow",
+                  image: "💻",
+                  description: "Streamline your processes with our cutting-edge solutions."
+                },
+                {
+                  title: "Harness Advanced Responsive Technology for Your Business",
+                  image: "📱",
+                  description: "Mobile-first approach ensuring accessibility everywhere."
+                },
+                {
+                  title: "Future-Ready Technology That Grows with Your Business",
+                  image: "🚀",
+                  description: "Scalable solutions designed for sustainable growth."
+                }
+              ].map((item, index) => (
+                <div key={index} className="group">
+                  <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div className="w-full h-48 bg-gray-100 rounded-xl flex items-center justify-center mb-6">
+                      <span className="text-6xl">{item.image}</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-500 transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4">{item.description}</p>
+                    <button className="text-orange-500 font-semibold hover:text-orange-600 transition-colors">
+                      Learn More →
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Enhance Section */}
-        <section className="py-12 bg-yellow-50">
-          <div className="text-center mb-8">
-            <h3 className="text-yellow-500 font-bold text-lg mb-2">Enhance</h3>
-            <h2 className="text-2xl sm:text-3xl font-semibold">
-              Smarter Tools for Industry Professionals
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4 sm:px-12">
-            <motion.div
-              whileHover={{ scale: 1.07 }}
-              className="bg-white p-6 rounded-xl shadow-sm border text-center"
-            >
-              <h4 className="font-bold text-lg mb-2">Empowering Your Projects</h4>
-              <p className="text-gray-600 text-sm">
-                Cuting-edge mobile applications for project management.
-              </p>
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.07 }}
-              className="bg-white p-6 rounded-xl shadow-sm border text-center"
-            >
-              <h4 className="font-bold text-lg mb-2">Innovative Apps</h4>
-              <p className="text-gray-600 text-sm">
-                Streamline design and construction processes.
-              </p>
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.07 }}
-              className="bg-white p-6 rounded-xl shadow-sm border text-center"
-            >
-              <h4 className="font-bold text-lg mb-2">Upcoming Apps</h4>
-              <p className="text-gray-600 text-sm">
-                Enhance efficiency and project experience.
-              </p>
-            </motion.div>
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Enhance</h2>
+              <h3 className="text-2xl font-semibold text-gray-700">
+                Smarter Tools for Industry Professionals
+              </h3>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: "🔧",
+                  title: "Engineering and Projects",
+                  subtitle: "without Cutting-Edge Solutions Applications",
+                  color: "bg-orange-500"
+                },
+                {
+                  icon: "📊",
+                  title: "Our Comprehensive Apps",
+                  subtitle: "Combined with Design and Control and Innovation",
+                  color: "bg-purple-500"
+                },
+                {
+                  icon: "⚡",
+                  title: "Unmatched Apps to Increase Your Digital Transformation and Efficiency",
+                  subtitle: "",
+                  color: "bg-blue-500"
+                }
+              ].map((item, index) => (
+                <div key={index} className="text-center">
+                  <div className={`w-16 h-16 ${item.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                    <span className="text-2xl">{item.icon}</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h4>
+                  {item.subtitle && <p className="text-gray-600">{item.subtitle}</p>}
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Testimonial Section */}
-        <section className="py-16 px-4 sm:px-12 bg-white flex flex-col items-center">
-          <motion.div
-            className="rounded-full w-28 h-28 bg-gray-200 mb-4 overflow-hidden flex items-center justify-center"
-            initial={{ scale: 0.9, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            <img
-              src={placeholder}
-              alt="User Profile"
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
-          <blockquote className="text-lg font-medium text-center max-w-2xl italic">
-            "HomeIdeas Technologies has transformed the way we approach interior design projects, making collaboration seamless and efficient."
-          </blockquote>
-          <p className="mt-3 text-gray-500">— Aditi Sharma, Designer, Home Decor</p>
+        <section className="py-20 bg-gradient-to-br from-yellow-50 to-orange-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="relative">
+                <div className="w-full h-96 bg-gray-200 rounded-2xl flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-gray-300 to-gray-400"></div>
+                  <Play className="w-16 h-16 text-white relative z-10 bg-black/50 rounded-full p-4" />
+                </div>
+              </div>
+              <div className="space-y-6">
+                <h2 className="text-4xl font-bold text-gray-900">Testimonials</h2>
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <blockquote className="text-xl text-gray-700 leading-relaxed">
+                  "HomeIdeas Technology has transformed the way we approach our projects. Their innovative solutions have streamlined our processes and significantly improved our efficiency."
+                </blockquote>
+                <div>
+                  <p className="font-semibold text-gray-900">Sarah Johnson</p>
+                  <p className="text-gray-600">CEO, TechCorp Solutions</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        {/* Call to Action */}
-        <section className="px-4 sm:px-12 py-12 flex flex-col lg:flex-row items-center justify-between bg-yellow-50">
-          <div className="mb-6 lg:mb-0">
-            <h2 className="text-2xl font-bold mb-1">
-              Join the Future of Home Tech
-            </h2>
-            <p className="text-gray-700 mb-3">Download the app and stay updated with the latest innovations.</p>
-            <motion.button
-              whileHover={{ scale: 1.04 }}
-              className="bg-yellow-500 text-white px-7 py-2 rounded font-semibold shadow"
-            >
-              Explore the App
-            </motion.button>
-            <button className="bg-gray-100 text-gray-800 px-7 py-2 rounded font-semibold border border-gray-200 ml-2">
-              Get in Touch
-            </button>
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="space-y-6">
+                <h2 className="text-4xl md:text-5xl font-bold text-white">
+                  Join the Future of Home Tech
+                </h2>
+                <p className="text-xl text-gray-300">
+                  Ready to transform your business with our innovative solutions? Get started today and experience the difference.
+                </p>
+                <div className="flex gap-4">
+                  <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                    Get Started
+                  </button>
+                  <button className="bg-transparent text-white px-8 py-4 rounded-full font-semibold border-2 border-white hover:bg-white hover:text-gray-900 transition-colors">
+                    Contact Us
+                  </button>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="w-full h-80 bg-gray-700 rounded-2xl flex items-center justify-center">
+                  <div className="text-6xl">💻</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <img
-            src={placeholder}
-            alt="Download Illustration"
-            className="rounded w-full max-w-md shadow-lg"
-          />
         </section>
 
         {/* Footer */}
-        <footer className="bg-white pt-8 pb-3 border-t">
-          <div className="flex flex-col md:flex-row md:justify-between items-center px-4 sm:px-12">
-            <div className="mb-5 md:mb-0 md:w-1/2">
-              <span className="font-extrabold text-lg text-yellow-500">HOME IDEAS</span>
-              <form className="flex mt-3">
-                <input
-                  type="email"
-                  placeholder="Join our newsletter"
-                  className="py-1 px-3 border rounded-l focus:outline-none w-36 sm:w-56"
-                />
-                <button
-                  type="submit"
-                  className="bg-yellow-500 text-white px-3 rounded-r font-semibold"
-                >
-                  Subscribe
-                </button>
-              </form>
-            </div>
-            <div className="flex space-x-10 text-sm text-gray-600 mb-4 md:mb-0">
+        <footer className="bg-white border-t border-gray-200 py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-4 gap-8">
               <div>
-                <h5 className="font-semibold mb-1">Company</h5>
-                <ul>
-                  <li><a href="#about" className="hover:text-yellow-500">About</a></li>
-                  <li><a href="#whatwedo" className="hover:text-yellow-500">Services</a></li>
+                <div className="flex items-center space-x-2 mb-4">
+                  <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">H</span>
+                  </div>
+                  <span className="font-bold text-xl">HOME IDEAS</span>
+                </div>
+                <p className="text-gray-600">
+                  Innovating the future of business with smart technology solutions.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-4">Company</h3>
+                <ul className="space-y-2 text-gray-600">
+                  <li><a href="#" className="hover:text-gray-900">About</a></li>
+                  <li><a href="#" className="hover:text-gray-900">Services</a></li>
+                  <li><a href="#" className="hover:text-gray-900">Contact</a></li>
                 </ul>
               </div>
               <div>
-                <h5 className="font-semibold mb-1">Follow Us</h5>
-                <ul>
-                  <li><a href="#" className="hover:text-yellow-500">Twitter</a></li>
-                  <li><a href="#" className="hover:text-yellow-500">LinkedIn</a></li>
+                <h3 className="font-semibold text-gray-900 mb-4">Resources</h3>
+                <ul className="space-y-2 text-gray-600">
+                  <li><a href="#" className="hover:text-gray-900">Blog</a></li>
+                  <li><a href="#" className="hover:text-gray-900">Documentation</a></li>
+                  <li><a href="#" className="hover:text-gray-900">Support</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-4">Legal</h3>
+                <ul className="space-y-2 text-gray-600">
+                  <li><a href="#" className="hover:text-gray-900">Privacy</a></li>
+                  <li><a href="#" className="hover:text-gray-900">Terms</a></li>
+                  <li><a href="#" className="hover:text-gray-900">Cookies</a></li>
                 </ul>
               </div>
             </div>
-          </div>
-          <div className="text-center text-xs text-gray-500 mt-6">
-            &copy; {new Date().getFullYear()} HOME IDEAS. All rights reserved.
+            <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-600">
+              <p>&copy; 2024 Home Ideas. All rights reserved.</p>
+            </div>
           </div>
         </footer>
-        <style jsx global>{`
-          body {
-            font-family: 'Manrope', sans-serif;
-          }
-        `}</style>
-      </main>
+      </div>
     </>
-  );
+  )
 }
