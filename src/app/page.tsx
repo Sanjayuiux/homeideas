@@ -309,15 +309,15 @@ export default function HomePage() {
         {/* Enhance Section */}
         <section className="py-20 bg-gray-50">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center mb-16">
+    <div className="text-center mb-16 flex flex-col gap-6">
       <div className="relative inline-block">
         <h2 className="relative z-10 text-4xl md:text-5xl font-bold text-gray-900 mb-4 inline-block">
           Enhance
         </h2>
         <img
-          src="/assets/icons/underline.svg"
+          src="/assets/icons/enhance_underline.svg"
           alt="underline"
-          className="absolute top-full left-0 w-full mt-2 z-0"
+          className="absolute top-full left-1/2 -translate-x-1/2 w-auto z-0"
         />
       </div>
       <div></div>
@@ -325,6 +325,7 @@ export default function HomePage() {
         Smarter Tools for Industry Professionals
       </h3>
     </div>
+
 
     <div className="grid md:grid-cols-3 gap-8">
       {[
@@ -368,7 +369,7 @@ export default function HomePage() {
         <img src='/assets/images/testimonial.jpg' alt="Testimonial" />
       </div>
       
-      <div className="space-y-6">
+      <div className="space-y-12">
         <div className="relative inline-block">
           <h2 className="relative z-10 text-4xl font-bold text-gray-900 inline-block">
             Testimonials
@@ -376,7 +377,7 @@ export default function HomePage() {
           <img
             src="/assets/icons/underline.svg"
             alt="underline"
-            className="absolute top-full left-0 w-full mt-2 z-0"
+            className="absolute top-full left-0 w-full mt-[2px] z-0"
           />
         </div>
 
