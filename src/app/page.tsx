@@ -253,73 +253,97 @@ export default function HomePage() {
 
         {/* Enhance Section */}
         <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Enhance</h2>
-              <h3 className="text-2xl font-semibold text-gray-700">
-                Smarter Tools for Industry Professionals
-              </h3>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: "/assets/icons/App_icon.svg",
-                  title: "Engineering and Projects",
-                  subtitle: "without Cutting-Edge Solutions Applications",
-                  color: "bg-orange-500"
-                },
-                {
-                  icon: "/assets/icons/mobile.svg",
-                  title: "Our Comprehensive Apps",
-                  subtitle: "Combined with Design and Control and Innovation",
-                  color: "bg-purple-500"
-                },
-                {
-                  icon: "/assets/icons/dropbox.svg",
-                  title: "Unmatched Apps to Increase Your Digital Transformation and Efficiency",
-                  subtitle: "",
-                  color: "bg-blue-500"
-                }
-              ].map((item, index) => (
-                <div key={index} className="text-center">
-                  <div className={`flex items-center justify-center mx-auto mb-4`}>
-                    <img src={item.icon} alt="" />
-                  </div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h4>
-                  {item.subtitle && <p className="text-gray-600">{item.subtitle}</p>}
-                </div>
-              ))}
-            </div>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <div className="relative inline-block">
+        <h2 className="relative z-10 text-4xl md:text-5xl font-bold text-gray-900 mb-4 inline-block">
+          Enhance
+        </h2>
+        <img
+          src="/assets/icons/underline.svg"
+          alt="underline"
+          className="absolute top-full left-0 w-full mt-2 z-0"
+        />
+      </div>
+      <div></div>
+      <h3 className="text-2xl font-semibold text-gray-700">
+        Smarter Tools for Industry Professionals
+      </h3>
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-8">
+      {[
+        {
+          icon: "/assets/icons/App_icon.svg",
+          title: "Engineering and Projects",
+          subtitle: "without Cutting-Edge Solutions Applications",
+          color: "bg-orange-500"
+        },
+        {
+          icon: "/assets/icons/mobile.svg",
+          title: "Our Comprehensive Apps",
+          subtitle: "Combined with Design and Control and Innovation",
+          color: "bg-purple-500"
+        },
+        {
+          icon: "/assets/icons/dropbox.svg",
+          title: "Unmatched Apps to Increase Your Digital Transformation and Efficiency",
+          subtitle: "",
+          color: "bg-blue-500"
+        }
+      ].map((item, index) => (
+        <div key={index} className="text-center">
+          <div className={`flex items-center justify-center mx-auto mb-4`}>
+            <img src={item.icon} alt={item.title} />
           </div>
-        </section>
+          <h4 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h4>
+          {item.subtitle && <p className="text-gray-600">{item.subtitle}</p>}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
         {/* Testimonial Section */}
         <section className="py-20 bg-gradient-to-br from-yellow-50 to-orange-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="relative">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative">
+        <img src='/assets/images/testimonial.jpg' alt="Testimonial" />
+      </div>
+      
+      <div className="space-y-6">
+        <div className="relative inline-block">
+          <h2 className="relative z-10 text-4xl font-bold text-gray-900 inline-block">
+            Testimonials
+          </h2>
+          <img
+            src="/assets/icons/underline.svg"
+            alt="underline"
+            className="absolute top-full left-0 w-full mt-2 z-0"
+          />
+        </div>
 
-                <img src='/assets/images/testimonial.jpg'/>
-              </div>
-              <div className="space-y-6">
-                <h2 className="text-4xl font-bold text-gray-900">Testimonials</h2>
-                <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <blockquote className="text-xl text-gray-700 leading-relaxed">
-                  "HomeIdeas Technology has transformed the way we approach our projects. Their innovative solutions have streamlined our processes and significantly improved our efficiency."
-                </blockquote>
-                <div>
-                  <p className="font-semibold text-gray-900">Sarah Johnson</p>
-                  <p className="text-gray-600">CEO, TechCorp Solutions</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <div className="flex mb-4">
+          {[...Array(5)].map((_, i) => (
+            <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+          ))}
+        </div>
+
+        <blockquote className="text-xl text-gray-700 leading-relaxed">
+          "HomeIdeas Technology has transformed the way we approach our projects. Their innovative solutions have streamlined our processes and significantly improved our efficiency."
+        </blockquote>
+
+        <div>
+          <p className="font-semibold text-gray-900">Sarah Johnson</p>
+          <p className="text-gray-600">CEO, TechCorp Solutions</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800">
