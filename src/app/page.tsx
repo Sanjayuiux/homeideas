@@ -365,7 +365,7 @@ export default function HomePage() {
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="grid lg:grid-cols-2 gap-16 items-center">
       <div className="relative">
-        <img src='/assets/images/testimonial.jpg' alt="Testimonial" />
+        <img src='/assets/images/testimonial2.jpg' alt="Testimonial" />
       </div>
       
       <div className="space-y-6">
