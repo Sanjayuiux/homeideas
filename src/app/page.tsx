@@ -194,53 +194,62 @@ export default function HomePage() {
         </section>
 
         {/* Smart Solutions Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Smart Solutions, Real Impact
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Why Professionals Choose HomeIdeas for Their Business Solutions
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Experience Seamless Integration of Technology in Your Workflow",
-                  image: "/assets/images/b1.jpg",
-                  description: "Streamline your processes with our cutting-edge solutions."
-                },
-                {
-                  title: "Harness Advanced Responsive Technology for Your Business",
-                  image: "/assets/images/b2.jpg",
-                  description: "Mobile-first approach ensuring accessibility everywhere."
-                },
-                {
-                  title: "Future-Ready Technology That Grows with Your Business",
-                  image: "/assets/images/b3.jpg",
-                  description: "Scalable solutions designed for sustainable growth."
-                }
-              ].map((item, index) => (
-                <div key={index} className="group">
-                  <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div className="w-full h-48 bg-gray-100 rounded-xl flex items-center justify-center mb-6">
-                      <img src={`${item.image}`}/>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-500 transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-600 mb-4">{item.description}</p>
-                    <button className="text-orange-500 font-semibold hover:text-orange-600 transition-colors">
-                      Learn More →
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
+       <section className="py-20 relative">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <div className="relative inline-block">
+        <h2 className="relative z-10 text-4xl md:text-5xl font-bold text-gray-900 mb-4 inline-block">
+          Smart Solutions, Real Impact
+        </h2>
+        <img
+          src="/assets/icons/underline.svg"
+          alt="underline"
+          className="absolute top-full left-0 w-full mt-1 z-0"
+        />
+      </div>
+    </div>
+
+    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+      Why Professionals Choose HomeIdeas for Their Business Solutions
+    </p>
+  </div>
+
+  <div className="grid md:grid-cols-3 gap-8 mt-16">
+    {[
+      {
+        title: "Experience Seamless Integration of Technology in Your Workflow",
+        image: "/assets/images/b1.jpg",
+        description: "Streamline your processes with our cutting-edge solutions."
+      },
+      {
+        title: "Harness Advanced Responsive Technology for Your Business",
+        image: "/assets/images/b2.jpg",
+        description: "Mobile-first approach ensuring accessibility everywhere."
+      },
+      {
+        title: "Future-Ready Technology That Grows with Your Business",
+        image: "/assets/images/b3.jpg",
+        description: "Scalable solutions designed for sustainable growth."
+      }
+    ].map((item, index) => (
+      <div key={index} className="group">
+        <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div className="w-full h-48 bg-gray-100 rounded-xl flex items-center justify-center mb-6">
+            <img src={item.image} alt={item.title}/>
           </div>
-        </section>
+          <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-500 transition-colors">
+            {item.title}
+          </h3>
+          <p className="text-gray-600 mb-4">{item.description}</p>
+          <button className="text-orange-500 font-semibold hover:text-orange-600 transition-colors">
+            Learn More →
+          </button>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
 
         {/* Enhance Section */}
         <section className="py-20 bg-gray-50">
