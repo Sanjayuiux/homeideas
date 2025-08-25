@@ -307,44 +307,42 @@ export default function HomePage() {
 
         {/* Testimonial Section */}
         <section className="py-20 bg-gradient-to-br from-yellow-50 to-orange-50">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="grid lg:grid-cols-2 gap-16 items-center">
-      <div className="relative">
-        <img src='/assets/images/testimonial.jpg' alt="Testimonial" />
-      </div>
-      
-      <div className="space-y-6">
-        <div className="relative inline-block">
-          <h2 className="relative z-10 text-4xl font-bold text-gray-900 inline-block">
-            Testimonials
-          </h2>
-          <img
-            src="/assets/icons/underline.svg"
-            alt="underline"
-            className="absolute top-full left-0 w-full mt-2 z-0"
-          />
-        </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="relative">
+                <img src='/assets/images/testimonial.jpg' alt="Testimonial" />
+              </div>
+              
+              <div className="space-y-6">
+                <div className="relative inline-block">
+                  <h2 className="relative z-10 text-4xl font-bold text-gray-900 inline-block">
+                    Testimonials
+                  </h2>
+                  <img
+                    src="/assets/icons/underline.svg"
+                    alt="underline"
+                    className="absolute top-full left-0 w-full mt-2 z-0"
+                  />
+                </div>
 
-        <div className="flex mb-4">
-          {[...Array(5)].map((_, i) => (
-            <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
-          ))}
-        </div>
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+                  ))}
+                </div>
 
-        <blockquote className="text-xl text-gray-700 leading-relaxed">
-          "HomeIdeas Technology has transformed the way we approach our projects. Their innovative solutions have streamlined our processes and significantly improved our efficiency."
-        </blockquote>
+                <blockquote className="text-xl text-gray-700 leading-relaxed">
+                  "HomeIdeas Technology has transformed the way we approach our projects. Their innovative solutions have streamlined our processes and significantly improved our efficiency."
+                </blockquote>
 
-        <div>
-          <p className="font-semibold text-gray-900">Sarah Johnson</p>
-          <p className="text-gray-600">CEO, TechCorp Solutions</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+                <div>
+                  <p className="font-semibold text-gray-900">Sarah Johnson</p>
+                  <p className="text-gray-600">CEO, TechCorp Solutions</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
