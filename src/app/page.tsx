@@ -357,12 +357,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-4 gap-8">
               <div>
-                <div className="flex items-center space-x-2 mb-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">H</span>
-                  </div>
-                  <span className="font-bold text-xl">HOME IDEAS</span>
-                </div>
+                <img src="/assets/images/homeideas_logo.jpg" className='w-[200px] lg:w-[330px]' alt="" />
                 <p className="text-gray-600">
                   Innovating the future of business with smart technology solutions.
                 </p>
