@@ -96,7 +96,8 @@ export default function PrivacyPolicyPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-yellow-50 to-orange-50">
+      {/* <section className="pt-24 pb-16 bg-gradient-to-br from-yellow-50 to-orange-50"> */}
+      <section className="pt-24 pb-16 bg-[url('/assets/images/homeideas_bg.jpg')] bg-cover bg-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1
@@ -177,7 +178,7 @@ export default function PrivacyPolicyPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-br from-yellow-50 to-orange-50">
+      <section className="py-20 bg-[url('/assets/images/homeideas_bg.jpg')] bg-cover bg-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="relative inline-block">
