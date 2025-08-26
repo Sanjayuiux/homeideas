@@ -206,7 +206,8 @@ export default function PrivacyPolicyPage() {
               </a>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <a href="tel:+919843044456">
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
               <div className="flex items-center mb-6">
                 <Phone className="w-8 h-8 text-orange-500 mr-3" />
                 <div>
@@ -214,10 +215,11 @@ export default function PrivacyPolicyPage() {
                   <p className="text-gray-600">Speak with our privacy team</p>
                 </div>
               </div>
-              <a href="tel:+15551234567" className="text-orange-500 font-semibold hover:text-orange-600 transition-colors">
-                +1 (555) 123-4567
+              <a href="tel:+919843044456" className="text-orange-500 font-semibold hover:text-orange-600 transition-colors">
+                +91 98430 44456
               </a>
             </div>
+            </a>
           </div>
 
           <div className="mt-12 text-center">
