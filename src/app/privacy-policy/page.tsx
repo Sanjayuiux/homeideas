@@ -112,10 +112,23 @@ export default function PrivacyPolicyPage() {
                 Your Data, Our Commitment
               </span>
             </h1>
-            <p className={`text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              We are committed to protecting your privacy and ensuring the security of your personal information.
+
+            <p
+              className={`text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${
+                isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+              }`}
+            >
+              We are committed to protecting your privacy and ensuring the security
+              of your personal information.
             </p>
-            <span className="text-gray-700 font-semibold">Effective Date: January 1, 2024</span>
+
+            <span
+              className={`text-gray-700 font-semibold inline-block transition-all duration-1000 delay-700 ${
+                isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+              }`}
+            >
+              Effective Date: January 1, 2024
+            </span>
           </div>
         </div>
       </section>
