@@ -1,6 +1,8 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, Download, Play, Users, Database, Globe, Shield, Code, Smartphone, BarChart3, Target, ArrowRight, Check, Star } from 'lucide-react';
+import Navigation from '../components/Nav';
+import Footer from '../components/Footer';
 
 const ProductsPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -45,30 +47,9 @@ const ProductsPage = () => {
     }
   ];
 
-  const Navigation = () => (
-    <nav className="bg-white shadow-lg fixed w-full top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <span className="text-2xl font-bold text-gray-900">HomeIdeas</span>
-            </div>
-          </div>
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-700 hover:text-orange-500 transition-colors">Home</a>
-            <a href="#" className="text-orange-500 font-semibold">Products</a>
-            <a href="#" className="text-gray-700 hover:text-orange-500 transition-colors">About</a>
-            <a href="#" className="text-gray-700 hover:text-orange-500 transition-colors">Services</a>
-            <a href="#" className="text-gray-700 hover:text-orange-500 transition-colors">Contact</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-
   return (
     <div className="min-h-screen bg-white font-[!Manrope] overflow-x-hidden">
-      <Navigation />
+      <Navigation/>
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-yellow-50 to-orange-50">
@@ -294,6 +275,7 @@ const ProductsPage = () => {
           </div>
         </div>
       </section>
+      <Footer/>
     </div>
   );
 };
