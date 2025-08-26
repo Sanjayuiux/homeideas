@@ -31,7 +31,7 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white font-sans">
+    <div className="min-h-screen bg-white">
       <Navigation/>
       {/* Header Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-yellow-50 to-orange-50">
