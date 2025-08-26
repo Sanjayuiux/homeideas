@@ -293,9 +293,6 @@ export default function ContactPage() {
               <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
                 Schedule a Demo
               </button>
-              <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold border-2 border-gray-200 hover:border-orange-300 hover:text-orange-600 transition-colors">
-                View Pricing
-              </button>
             </div>
           </div>
         </div>
