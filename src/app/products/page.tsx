@@ -52,7 +52,7 @@ const ProductsPage = () => {
       <Navigation/>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-yellow-50 to-orange-50">
+      <section className="pt-24 pb-16 bg-[url('/assets/images/homeideas_bg.jpg')] bg-cover bg-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className={`font-bold text-gray-900 mb-6 transition-all duration-1000 delay-300 ${
@@ -103,7 +103,7 @@ const ProductsPage = () => {
       </section>
 
       {/* Featured Product - HIT FURNISH */}
-      <section className="py-20 bg-gradient-to-br from-yellow-50 to-orange-50">
+      <section className="py-20 bg-[url('/assets/images/homeideas_bg.jpg')] bg-cover bg-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-6">
@@ -254,20 +254,20 @@ const ProductsPage = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800">
+      <section className="py-20 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
               Ready to Transform Your Workflow?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-black/40 mb-8 max-w-2xl mx-auto">
               Join thousands of professionals who trust HomeIdeas Technology for their business solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
                 Get Started Today
               </button>
-              <button className="bg-transparent text-white px-8 py-4 rounded-full font-semibold border-2 border-white hover:bg-white hover:text-gray-900 transition-colors">
+              <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold border-2 border-gray-200 hover:border-gray-300 transition-colors">
                 Contact Sales
               </button>
             </div>
