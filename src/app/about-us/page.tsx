@@ -299,65 +299,75 @@ export default function HomePage() {
         </section>
 
         <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-            <div className="relative inline-block">
+              <div className="relative inline-block">
                 <h2 className="relative z-10 text-4xl md:text-5xl font-bold text-gray-900 mb-4 inline-block">
-                Our Values
+                  Our Values
                 </h2>
                 {/* <img
                 src="/assets/icons/underline.svg"
                 alt="underline"
                 className="absolute top-full left-0 w-full mt-1 z-0"
                 /> */}
-            </div>
+              </div>
             </div>
 
             <p className="text-xl text-center text-gray-600 max-w-3xl mx-auto">
-            At Home Ideas Technologies, we believe in innovation as the cornerstone of our solutions. Our commitment to empowering businesses and fostering community growth shapes everything we do
+              At Home Ideas Technologies, we believe in innovation as the cornerstone of our solutions. Our commitment to empowering businesses and fostering community growth shapes everything we do
             </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mt-16">
+            {[
+              {
+                title: "Innovation First: Our Driving Force",
+                icon: Lightbulb,
+                description: "We leverage AI driven tools to tackle real Industry challenges"
+              },
+              {
+                title: "Empowering Businesses: Leveling the Playing Field",
+                icon: TrendingUp,
+                description: "Our solutions provide equal digital opportunities for all professionals"
+              },
+              {
+                title: "Customer-Centric: Building Trust and Transparency",
+                icon: Users,
+                description: "We prioritize customer needs to enhance their experience."
+              }
+            ].map((item, index) => {
+              const IconComponent = item.icon;
+              return (
+                <div key={index} className="group text-center">
+          <div className="bg-white rounded-2xl p-6 transition-all duration-300">
+            {/* Small colored icon box */}
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-orange-100 mb-4">
+              <IconComponent size={24} className="text-orange-500" />
+            </div>
+
+            {/* Title */}
+            <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-orange-500 transition-colors">
+              {item.title}
+            </h3>
+
+            {/* Description */}
+            <p className="text-gray-600 text-sm">{item.description}</p>
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mt-16">
-            {[
-            {
-                title: "Innovation First: Our Driving Force",
-                image: "/assets/images/b1.jpg",
-                description: "We leverage AI driven tools to tackle real Industry challenges"
-            },
-            {
-                title: "Empowering Businesses: Leveling the Playing Field",
-                image: "/assets/images/b2.jpg",
-                description: "Our solutions provide equal digital opportunities for all professionals"
-            },
-            {
-                title: "Customer-Centric: Building Trust and Transparency",
-                image: "/assets/images/b3.jpg",
-                description: "We prioritize customer needs to enhance their experience."
-            }
-            ].map((item, index) => (
-            <div key={index} className="group">
-                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="w-full h-48 bg-gray-100 rounded-xl flex items-center justify-center mb-6">
-                    <img src={item.image} alt={item.title}/>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-500 transition-colors">
-                    {item.title}
-                </h3>
-                <p className="text-gray-600 mb-4">{item.description}</p>
-                </div>
-            </div>
-            ))}
-        </div>
-        <div className="flex gap-4 justify-center items-center mt-6">
+              );
+            })}
+          </div>
+          <div className="flex gap-4 justify-center items-center mt-6">
             <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-            Discover
+              Discover
             </button>
             <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold border-2 border-gray-200 hover:border-gray-300 transition-colors">
-            Join 
+              Join 
             </button>
-        </div>
+          </div>
         </section>
+        
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800" id='contact'>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
