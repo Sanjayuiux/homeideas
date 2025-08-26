@@ -168,7 +168,7 @@ const ProductsPage = () => {
                 <div className="relative">
                   <div className="w-full h-96 rounded-2xl flex items-center justify-center overflow-hidden">
                     <img
-                      src="/assets/images/products/product_2.jpg"
+                      src="/assets/images/products/product_3.jpg"
                       alt="Product"
                       className="w-full h-full object-cover"
                     />
@@ -241,7 +241,7 @@ const ProductsPage = () => {
                 <div className="relative">
                   <div className="w-full h-96 rounded-2xl flex items-center justify-center overflow-hidden">
                     <img
-                      src="/assets/images/products/product_3.jpg"
+                      src="/assets/images/products/product_2.jpg"
                       alt="Product"
                       className="w-full h-full object-cover"
                     />
