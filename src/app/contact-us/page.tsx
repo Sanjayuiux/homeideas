@@ -60,23 +60,26 @@ export default function ContactPage() {
               {
                 icon: Phone,
                 title: "Call Us",
-                info: "+1 (555) 123-4567",
-                subtitle: "Mon-Fri 9am-6pm"
+                info: "+91 98430 44456",
+                subtitle: "Mon-Fri 9am-6pm",
+                href: "tel:+919843044456"
               },
               {
                 icon: Mail,
                 title: "Email Us",
                 info: "hello@homeideas.com",
-                subtitle: "We'll respond within 24hrs"
+                subtitle: "We'll respond within 24hrs",
+                href:""
               },
               {
                 icon: MapPin,
                 title: "Visit Us",
                 info: "102, 20, Eden Park, Vittal Mallya Rd, KG Halli, D' Souza Layout, Ashok Nagar, Bengaluru,Karnataka 560001",
-                subtitle: "Schedule an appointment"
+                subtitle: "Schedule an appointment",
+                href: "https://maps.app.goo.gl/JU9XXXdJoKhLH2N76"
               }
             ].map((item, index) => (
-              <div key={index} className="bg-white rounded-2xl p-6 shadow-lg 
+              <a key={index} href={item.href} target='_blank' className="bg-white rounded-2xl p-6 shadow-lg 
               hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border 
               border-gray-100 flex flex-col  items-center text-center ">
                 <div className="w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center mb-4">
@@ -85,7 +88,7 @@ export default function ContactPage() {
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-900 font-semibold mb-1">{item.info}</p>
                 <p className="text-gray-600 text-sm">{item.subtitle}</p>
-              </div>
+              </a>
             ))}
           </div>
         </div>
