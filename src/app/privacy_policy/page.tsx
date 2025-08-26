@@ -114,10 +114,7 @@ export default function PrivacyPolicyPage() {
             <p className={`text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
               We are committed to protecting your privacy and ensuring the security of your personal information.
             </p>
-            <div className={`inline-flex items-center bg-white px-6 py-3 rounded-full shadow-lg transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <Shield className="w-5 h-5 text-green-600 mr-2" />
-              <span className="text-gray-700 font-semibold">Effective Date: January 1, 2024</span>
-            </div>
+            <span className="text-gray-700 font-semibold">Effective Date: January 1, 2024</span>
           </div>
         </div>
       </section>
