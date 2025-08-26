@@ -187,12 +187,11 @@ export default function ContactPage() {
                 </label>
                 <div className="grid md:grid-cols-2 gap-4">
                   {[
-                    { value: 'homeowner', label: 'Homeowner' },
-                    { value: 'designer', label: 'Designer' },
+                    { value: 'engineer', label: 'Engineer' },
+                    { value: 'interior designer', label: 'Interior Designer' },
                     { value: 'architect', label: 'Architect' },
                     { value: 'vendor', label: 'Vendor' },
-                    { value: 'other1', label: 'Other' },
-                    { value: 'other2', label: 'Other' }
+                    { value: 'other', label: 'Other' },
                   ].map((option, index) => (
                     <label key={index} className="flex items-center cursor-pointer group">
                       <input
