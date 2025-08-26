@@ -137,15 +137,15 @@ const ProductsPage = () => {
             </div>
 
             <div className="relative">
-              <div className="w-full h-96 bg-gray-200 rounded-2xl flex items-center justify-center">
-                <div className="text-gray-400 text-center">
-                  <div className="w-20 h-20 bg-gray-300 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                    <Smartphone className="w-10 h-10" />
-                  </div>
-                  <p>Product Screenshot</p>
-                </div>
-              </div>
+            <div className="w-full h-96 rounded-2xl flex items-center justify-center overflow-hidden">
+              <img
+                src="/assets/images/products/product_1.png"
+                alt="Product"
+                className="w-full h-full object-contain"
+              />
             </div>
+          </div>
+
           </div>
         </div>
       </section>
@@ -165,16 +165,15 @@ const ProductsPage = () => {
           <div className="space-y-20">
             {/* HIT FURNITURE */}
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="relative order-2 lg:order-1">
-                <div className="w-full h-96 bg-gray-200 rounded-2xl flex items-center justify-center">
-                  <div className="text-gray-400 text-center">
-                    <div className="w-20 h-20 bg-gray-300 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                      <Database className="w-10 h-10" />
-                    </div>
-                    <p>Design Interface Preview</p>
+                <div className="relative">
+                  <div className="w-full h-96 rounded-2xl flex items-center justify-center overflow-hidden">
+                    <img
+                      src="/assets/images/products/product_2.jpg"
+                      alt="Product"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
-              </div>
               
               <div className="space-y-6 order-1 lg:order-2">
                 <div className="inline-block bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-semibold">
@@ -239,16 +238,16 @@ const ProductsPage = () => {
                 </div>
               </div>
 
-              <div className="relative">
-                <div className="w-full h-96 bg-gray-200 rounded-2xl flex items-center justify-center">
-                  <div className="text-gray-400 text-center">
-                    <div className="w-20 h-20 bg-gray-300 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                      <Users className="w-10 h-10" />
-                    </div>
-                    <p>CRM Dashboard Preview</p>
+                <div className="relative">
+                  <div className="w-full h-96 rounded-2xl flex items-center justify-center overflow-hidden">
+                    <img
+                      src="/assets/images/products/product_3.jpg"
+                      alt="Product"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
-              </div>
+
             </div>
           </div>
         </div>
