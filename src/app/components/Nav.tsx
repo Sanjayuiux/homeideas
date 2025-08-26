@@ -21,9 +21,11 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <div className="flex-shrink-0">
-              <img src="/assets/images/logo.svg" alt="Home Ideas Logo" className='w-[120px] sm:w-[150px]' />
-            </div>
+            <a href="/">
+              <div className="flex-shrink-0" >
+                <img src="/assets/images/logo.svg" alt="Home Ideas Logo" className='w-[120px] sm:w-[150px]' />
+              </div>
+            </a>
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
