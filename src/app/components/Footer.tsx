@@ -18,7 +18,7 @@ const Footer = () => {
                 Join our newsletter to stay up to date on features and releases.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 mb-4">
+              <div className="flex flex-col sm:flex-row gap-4 mb-4 w-full max-w-xl">
                 <input
                   type="email"
                   placeholder="Enter your email"
@@ -28,7 +28,7 @@ const Footer = () => {
                   Explore Our Apps
                 </button>
               </div>
-              
+
               <p className="text-sm text-gray-500">
                 By subscribing you agree to with our{' '}
                 <a href="/privacy-policy" className="text-gray-700 underline">Privacy Policy</a>{' '}
