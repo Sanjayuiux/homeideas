@@ -60,9 +60,9 @@ export default function ContactPage() {
               {
                 icon: Phone,
                 title: "Call Us",
-                info: "+91 98430 44456",
+                info: "+91 72002 40860",
                 subtitle: "Mon-Fri 9am-6pm",
-                href: "tel:+919843044456"
+                href: "tel:+917200240860"
               },
               {
                 icon: Mail,
