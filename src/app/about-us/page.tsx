@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import { ChevronRight, Play, Star, Users, Zap, Shield,
-   Smartphone, Code, Database, Globe, Cloud, Cpu, Target, BarChart3 } from 'lucide-react'
+   Smartphone, Code, Database, Globe, Cloud, Cpu, Target, BarChart3, Lightbulb, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Nav'
 import Footer from '../components/Footer'
 
@@ -91,8 +91,12 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <div className="relative">
-                <img src="/assets/images/About_us.jpg" alt="About Us" />
+              <div className="relative h-[450px] overflow-hidden rounded-[20px]">
+                <img
+                  src="/assets/images/about_us/about_us_1.png"
+                  alt="About Us"
+                  className="absolute inset-0 w-full h-full object-cover object-top"
+                />
               </div>
             </div>
           </div>
@@ -102,8 +106,8 @@ export default function HomePage() {
         <section className="py-20" id='about'>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-                <div className="relative">
-                <img src="/assets/images/About_us.jpg" alt="About Us" />
+                <div className="relative overflow-hidden rounded-[20px]">
+                <img src="/assets/images/about_us/about_us_2.jpg" alt="About Us" />
               </div>
               <div className="space-y-6">
                 <div className="relative inline-block">
