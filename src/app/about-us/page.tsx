@@ -4,8 +4,8 @@ import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import { ChevronRight, Play, Star, Users, Zap, Shield,
    Smartphone, Code, Database, Globe, Cloud, Cpu, Target, BarChart3 } from 'lucide-react'
-import Navigation from './../components/Nav'
-import Footer from './../components/Footer'
+import Navigation from '../components/Nav'
+import Footer from '../components/Footer'
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false)
