@@ -72,7 +72,7 @@ export default function ContactPage() {
               {
                 icon: MapPin,
                 title: "Visit Us",
-                info: "123 Tech Street, Innovation City",
+                info: "102, 20, Eden Park, Vittal Mallya Rd, KG Halli, D' Souza Layout, Ashok Nagar, Bengaluru,Karnataka 560001",
                 subtitle: "Schedule an appointment"
               }
             ].map((item, index) => (
