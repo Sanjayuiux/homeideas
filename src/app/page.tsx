@@ -69,29 +69,31 @@
           <section className="py-20" id='about'>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid lg:grid-cols-2 gap-16 items-center">
-                <div className="space-y-6">
+                <div className="space-y-6 flex flex-col gap-8">
                   <div className="relative inline-block">
                     <h2 className="relative z-10 text-4xl md:text-5xl font-bold text-gray-900">
                       About Us
                     </h2>
-                    {/* underline brush vector
+                    {/* underline brush vector */}
                     <img
-                      src="/assets/icons/underline.svg"
+                      src="/assets/icons/about_us_underline.svg"
                       alt="underline"
-                      className="absolute -bottom-4 left-0 w-[220px] md:w-[260px] -z-0"
+                      className="absolute -bottom-8 left-0  -z-0 mt-2"
                       // style={{ filter: 'brightness(0) saturate(100%) invert(92%) sepia(30%) saturate(633%) hue-rotate(358deg) brightness(103%) contrast(104%)' }}
-                    /> */}
+                    />
                   </div>
 
-                  <h3 className="text-2xl font-semibold text-gray-700">
-                    Who We Are: Innovators in Digital Solutions for Design and Construction
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    We are a team of passionate innovators dedicated to revolutionizing the way businesses operate through cutting-edge technology solutions. Our expertise spans across digital transformation, smart applications, and innovative workflow optimization.
-                  </p>
-                  <p className="text-gray-600 leading-relaxed">
-                    With years of experience in the industry, we understand the challenges modern businesses face and have developed comprehensive solutions that drive real results.
-                  </p>
+                  <div className='space-y-6'>
+                    <h3 className="text-2xl font-semibold text-gray-700">
+                      Who We Are: Innovators in Digital Solutions for Design and Construction
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      We are a team of passionate innovators dedicated to revolutionizing the way businesses operate through cutting-edge technology solutions. Our expertise spans across digital transformation, smart applications, and innovative workflow optimization.
+                    </p>
+                    <p className="text-gray-600 leading-relaxed">
+                      With years of experience in the industry, we understand the challenges modern businesses face and have developed comprehensive solutions that drive real results.
+                    </p>
+                  </div>
                 </div>
 
                 <div className="relative">
@@ -115,11 +117,11 @@
                     <span className="relative z-10 text-[40px] font-semibold text-gray-900">
                       Innovate
                     </span>
-                    {/* <img
-                      src="/assets/icons/underline.svg"
+                    <img
+                      src="/assets/icons/innovate_underline.svg"
                       alt="underline"
-                      className="absolute -bottom-2 left-0 w-[120px] -z-0"
-                    /> */}
+                      className="absolute -bottom-2 left-0 w-[300px] -z-0"
+                    />
                   </div>
 
                   <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
@@ -157,7 +159,7 @@
                           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
                             What We Do
                           </h2>
-                          <div className="w-16 h-1 bg-orange-400 mt-2"></div>
+                          <img src="/assets/icons/what_we_do_underline.svg" alt="" />
                         </div>
                         
                         <h3 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">
@@ -235,16 +237,16 @@
           <h2 className="relative z-10 text-4xl md:text-5xl font-bold text-gray-900 mb-4 inline-block">
             Smart Solutions, Real Impact
           </h2>
-          {/* <img
-            src="/assets/icons/underline.svg"
+          <img
+            src="/assets/icons/smart_solutions_underline.svg"
             alt="underline"
-            className="absolute top-full left-0 w-full mt-1 z-0"
-          /> */}
+            className="absolute top-full left-0 w-full -mt-2 z-0"
+          />
         </div>
       </div>
 
-      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-        Why Professionals Choose HomeIdeas for Their Business Solutions
+      <p className="text-[40px] text-black font-[700] text-center max-w-3xl mx-auto">
+        Why Professionals Choose Homeideas for Their Business Solutions
       </p>
     </div>
 
@@ -288,19 +290,19 @@
           {/* Enhance Section */}
           <section className="py-20 bg-gray-50">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-16">
+      <div className="text-center mb-16 flex flex-col items-center gap-3">
         <div className="relative inline-block">
           <h2 className="relative z-10 text-4xl md:text-5xl font-bold text-gray-900 mb-4 inline-block">
             Enhance
           </h2>
-          {/* <img
-            src="/assets/icons/underline.svg"
+          <img
+            src="/assets/icons/enhance_underline.svg"
             alt="underline"
-            className="absolute top-full left-0 w-full mt-2 z-0"
-          /> */}
+            className="absolute top-full left-0 w-full -mt-4 z-0"
+          />
         </div>
         <div></div>
-        <h3 className="text-2xl font-semibold text-gray-700">
+        <h3 className="text-[40px] lg:w-[760px] font-semibold text-gray-700">
           Smarter Tools for Industry Professionals
         </h3>
       </div>
@@ -309,24 +311,24 @@
                 {[
                   {
                     icon: "/assets/icons/App_icon.svg",
-                    title: "Engineering and Projects",
-                    subtitle: "without Cutting-Edge Solutions Applications",
+                    title: "Empowering Your Projects with Our Cutting-Edge Mobile Applications",
+                    subtitle: "Our AI scans and identifies high-value leads from various sources, including LinkedIn, company websites, and databases.",
                     color: "bg-orange-500"
                   },
                   {
                     icon: "/assets/icons/mobile.svg",
-                    title: "Our Comprehensive Apps",
-                    subtitle: "Combined with Design and Control and Innovation",
+                    title: "Our Innovative Apps Streamline Your Design and Construction Processes",
+                    subtitle: "Track lead engagement and optimize campaigns with real-time analytics.AI predicts the best times to send emails",
                     color: "bg-purple-500"
                   },
                   {
                     icon: "/assets/icons/dropbox.svg",
-                    title: "Unmatched Apps to Increase Your Digital Transformation and Efficiency",
-                    subtitle: "",
+                    title: "Upcoming Apps to Enhance Your Design Experience and Efficiency",
+                    subtitle: "Launch AI-driven multi-channel outreach campaigns via email, LinkedIn, and WhatsApp with minimal effort.",
                     color: "bg-blue-500"
                   }
                 ].map((item, index) => (
-                  <div key={index} className="text-center">
+                  <div key={index} className="text-center border border-gray-100 p-4 rounded-lg">
                     <div className={`flex items-center justify-center mx-auto mb-4`}>
                       <img src={item.icon} alt={item.title} />
                     </div>
@@ -348,33 +350,35 @@
         </div>
         
         <div className="space-y-6">
-          <div className="relative inline-block">
-            <h2 className="relative z-10 text-4xl font-bold text-gray-900 inline-block">
-              Testimonials
-            </h2>
-            {/* <img
-              src="/assets/icons/underline.svg"
-              alt="underline"
-              className="absolute top-full left-0 w-full mt-2 z-0"
-            /> */}
-          </div>
+            <div className='flex flex-col gap-12 '>
+              <div className="relative inline-block">
+              <h2 className="relative z-10 text-4xl font-bold text-gray-900 inline-block">
+                Testimonials
+              </h2>
+              <img
+                src="/assets/icons/underline.svg"
+                alt="underline"
+                className="absolute top-full left-0 w-fit -mt-1 z-0"
+              />
+            </div>
 
-                  <div className="flex mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
+            <div className="flex mb-4">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-6 h-6 text-[#544A07] fill-current" />
+              ))}
+            </div>
 
-                  <blockquote className="text-xl text-gray-700 leading-relaxed">
-                    "HomeIdeas Technology has transformed the way we approach our projects. Their innovative solutions have streamlined our processes and significantly improved our efficiency."
-                  </blockquote>
+            </div>
+                <blockquote className="text-xl text-gray-700 leading-relaxed">
+                  "HomeIdeas Technology has transformed the way we approach our projects. Their innovative solutions have streamlined our processes and significantly improved our efficiency."
+                </blockquote>
 
-                  <div>
-                    <p className="font-semibold text-gray-900">Sarah Johnson</p>
-                    <p className="text-gray-600">CEO, TechCorp Solutions</p>
-                  </div>
+                <div>
+                  <p className="font-semibold text-gray-900">Sarah Johnson</p>
+                  <p className="text-gray-600">CEO, TechCorp Solutions</p>
                 </div>
               </div>
+            </div>
             </div>
           </section>
           {/* CTA Section */}
