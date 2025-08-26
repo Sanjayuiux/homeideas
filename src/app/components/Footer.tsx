@@ -7,7 +7,7 @@ const Footer = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-4 gap-8">
               <div>
-                <img src="/assets/images/homeideas_logo.jpg" className='w-[200px] lg:w-[330px]' alt="" />
+                <img src="/assets/images/logo.svg" className='w-[200px] lg:w-[330px]' alt="" />
                 <p className="text-gray-600">
                   Innovating the future of business with smart technology solutions.
                 </p>
