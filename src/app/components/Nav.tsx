@@ -27,10 +27,10 @@ export default function Navigation() {
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Home</a>
-              <a href="#about" className="text-gray-600 hover:text-gray-900 transition-colors">About</a>
-              <a href="#services" className="text-gray-600 hover:text-gray-900 transition-colors">Services</a>
-              <a href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
+              <a href="/" className="text-gray-600 hover:text-gray-900 transition-colors">Home</a>
+              <a href="/about-us" className="text-gray-600 hover:text-gray-900 transition-colors">About </a>
+              <a href="/products" className="text-gray-600 hover:text-gray-900 transition-colors">Products</a>
+              <a href="/contact-us" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
             </div>
             
             {/* Desktop Get Started Button */}
@@ -58,32 +58,32 @@ export default function Navigation() {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-md border-t border-gray-100">
               <a 
-                href="#" 
+                href="/" 
                 onClick={closeMobileMenu}
                 className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors"
               >
                 Home
               </a>
               <a 
-                href="#about" 
+                href="/about-us" 
                 onClick={closeMobileMenu}
                 className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors"
               >
-                About
+                About Us
               </a>
               <a 
-                href="#services" 
+                href="/products" 
                 onClick={closeMobileMenu}
                 className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors"
               >
-                Services
+                Products 
               </a>
               <a 
-                href="#contact" 
+                href="/contact-us" 
                 onClick={closeMobileMenu}
                 className="block px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors"
               >
-                Contact
+                Contact Us
               </a>
               <div className="pt-2">
                 <button 
