@@ -34,7 +34,7 @@ export default function ContactPage() {
     <div className="min-h-screen bg-white">
       <Navigation/>
       {/* Header Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-yellow-50 to-orange-50">
+      <section className="pt-24 pb-16 bg-[url('/assets/images/homeideas_bg.jpg')] bg-cover bg-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="inline-block mb-4">
@@ -279,7 +279,7 @@ export default function ContactPage() {
       </section>
 
       {/* Footer CTA */}
-      <section className="py-16 bg-gradient-to-br from-yellow-50 to-orange-50">
+      <section className="py-16 bg-[url('/assets/images/homeideas_bg.jpg')] bg-cover bg-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
