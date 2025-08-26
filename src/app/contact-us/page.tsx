@@ -78,7 +78,7 @@ export default function ContactPage() {
             ].map((item, index) => (
               <div key={index} className="bg-white rounded-2xl p-6 shadow-lg 
               hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border 
-              border-gray-100 flex flex-col justify-center items-center">
+              border-gray-100 flex flex-col  items-center text-center ">
                 <div className="w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center mb-4">
                   <item.icon className="w-6 h-6 text-white" />
                 </div>
