@@ -139,7 +139,11 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="relative">
-                <img src="/assets/images/Innovate.jpg" />
+                <img 
+                  src="/assets/images/Innovate.jpg" 
+                  className="rounded-tl-[55px] rounded-br-[55px]" 
+                  alt="Innovate"
+                />
               </div>
               <div className="space-y-6">
                 {/* Innovate heading with underline */}
