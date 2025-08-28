@@ -273,7 +273,7 @@
         <div key={index} className="group">
           <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
             <div className="w-full h-48 bg-gray-100 rounded-xl flex items-center justify-center mb-6">
-              <img src={item.image} alt={item.title}/>
+              <img src={item.image} alt={item.title} className='rounded-xl'/>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-500 transition-colors">
               {item.title}
