@@ -299,7 +299,7 @@ export default function ContactPage() {
       </section>
 
       {/* Footer CTA */}
-      <section className="py-16 bg-[url('/assets/images/homeideas_bg.jpg')] bg-cover bg-center">
+      {/* <section className="py-16 bg-[url('/assets/images/homeideas_bg.jpg')] bg-cover bg-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
@@ -315,7 +315,7 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer/>
     </div>
