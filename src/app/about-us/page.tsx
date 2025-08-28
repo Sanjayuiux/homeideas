@@ -1,11 +1,11 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Head from 'next/head'
 import { ChevronRight, Play, Star, Users, Zap, Shield,
    Smartphone, Code, Database, Globe, Cloud, Cpu, Target, BarChart3, Lightbulb, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Nav'
 import Footer from '../components/Footer'
+import Link from 'next/link'
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false)
@@ -288,14 +288,14 @@ export default function HomePage() {
               );
             })}
           </div>
-          <div className="flex gap-4 justify-center items-center mt-6">
+          {/* <div className="flex gap-4 justify-center items-center mt-6">
             <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
               Discover
             </button>
             <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold border-2 border-gray-200 hover:border-gray-300 transition-colors">
               Join 
             </button>
-          </div>
+          </div> */}
         </section>
         
         {/* CTA Section */}
@@ -310,12 +310,14 @@ export default function HomePage() {
                     Ready to transform your business with our innovative solutions? Get started today and experience the difference.
                   </p>
                   <div className="flex gap-4">
-                    <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-                      Get Started
-                    </button>
-                    <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold border-2 border-gray-200 hover:border-gray-300 transition-colors">
+                    <Link 
+                    href="/contact-us"
+                    className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
                       Contact Us
-                    </button>
+                    </Link>
+                    {/* <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold border-2 border-gray-200 hover:border-gray-300 transition-colors">
+                      Contact Us
+                    </button> */}
                   </div>
                 </div>
                 <div className="relative">
