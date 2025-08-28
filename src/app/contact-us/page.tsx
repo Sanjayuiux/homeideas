@@ -276,7 +276,9 @@ export default function ContactPage() {
                     )}
                   </div>
                   <span className="text-gray-700 leading-relaxed">
-                    I agree to <span className="text-orange-600 hover:text-orange-700 font-semibold">Terms</span>
+                    I agree to <span className="text-orange-600 hover:text-orange-700 font-semibold">
+                      <a href="/term-of-services">Terms</a>
+                    </span>
                   </span>
                 </label>
               </div>
