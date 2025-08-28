@@ -25,7 +25,7 @@ const Footer = () => {
                   className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
                 />
                 <button className="px-6 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-lg hover:bg-yellow-500 transition-colors">
-                  Explore Our Apps
+                  Subscribe
                 </button>
               </div>
 
