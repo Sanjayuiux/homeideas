@@ -2,31 +2,66 @@
 
   import { useState, useEffect } from 'react'
   import { ChevronRight, Play, Star, Users, Zap, Shield,
-    Smartphone, Code, Database, Globe, Cloud, Cpu, Target, BarChart3 } from 'lucide-react'
+    Smartphone, Code, Database, Globe, Cloud, Cpu, Target, BarChart3,  CheckCircle, LucideIcon } from 'lucide-react'
+  
   import Navigation from './components/Nav'
   import Footer from './components/Footer'
   import Link from "next/link";
 
+  type ScreenSize = 'mobile' | 'tablet' | 'desktop';
+  type OrbitPosition = 'inner' | 'outer';
+
+  interface OrbitingIcon {
+    icon: LucideIcon;
+    color: string;
+    position: OrbitPosition;
+  }
+
+
   export default function HomePage() {
     const [isVisible, setIsVisible] = useState(false)
-    const orbitingIcons = [
-        // Inner orbit - 4 icons at cardinal positions (0°, 90°, 180°, 270°)
-        { icon: Code, color: 'bg-green-500', position: 'inner', angle: 0 },     // Top
-        { icon: Database, color: 'bg-blue-500', position: 'inner', angle: 90 },  // Right
-        { icon: Shield, color: 'bg-red-400', position: 'inner', angle: 180 },   // Bottom
-        { icon: Globe, color: 'bg-blue-400', position: 'inner', angle: 270 },   // Left
-        
-        // Outer orbit - 5 icons at plus positions (45°, 135°, 225°, 315°) + one extra
-        { icon: Users, color: 'bg-orange-400', position: 'outer', angle: 45 },
-        { icon: BarChart3, color: 'bg-red-500', position: 'outer', angle: 135 },
-        { icon: Target, color: 'bg-green-400', position: 'outer', angle: 225 },
-        { icon: Smartphone, color: 'bg-orange-500', position: 'outer', angle: 315 },
-        { icon: Play, color: 'bg-blue-400', position: 'outer', angle: 0 }  // Extra icon
-      ];
+
     useEffect(() => {
       setIsVisible(true)
     }, [])
+      const [screenSize, setScreenSize] = useState<ScreenSize>('desktop');
 
+  useEffect(() => {
+    const handleResize = (): void => {
+      const width = window.innerWidth;
+      if (width <= 640) {
+        setScreenSize('mobile');
+      } else if (width <= 1024) {
+        setScreenSize('tablet');
+      } else {
+        setScreenSize('desktop');
+      }
+    };
+
+    // Set initial screen size
+    handleResize();
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const orbitingIcons: OrbitingIcon[] = [
+    { icon: Users, color: 'bg-orange-500', position: 'inner' },
+    { icon: Shield, color: 'bg-pink-500', position: 'outer' },
+    { icon: BarChart3, color: 'bg-red-500', position: 'inner' },
+    { icon: Smartphone, color: 'bg-blue-500', position: 'outer' },
+    { icon: CheckCircle, color: 'bg-green-500', position: 'inner' },
+    { icon: Code, color: 'bg-emerald-500', position: 'outer' },
+    { icon: Smartphone, color: 'bg-orange-600', position: 'inner' },
+    { icon: Play, color: 'bg-blue-600', position: 'outer' }
+  ];
+
+  const getAnimationClass = (position: OrbitPosition): string => {
+    return `orbit-${position}-${screenSize}`;
+  };
     return (
       <>
         <div className="min-h-screen bg-white font-[!Manrope] overflow-x-hidden">
@@ -179,49 +214,48 @@
                     </div>
                     
                     {/* Planetary Animation Side */}
-                    <div className="relative flex items-center justify-center h-[500px] lg:h-[600px]">
-                      
+                    <div className="relative flex items-center justify-center h-[300px] sm:h-[400px] lg:h-[600px]">
                       {/* Central Hub */}
-                      <div className="relative z-10 w-20 h-20 bg-white rounded-xl flex items-center justify-center shadow-lg">
-                        <Zap className="w-10 h-10 text-yellow-500" />
+                      <div className="relative z-10 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white rounded-xl flex items-center justify-center shadow-lg">
+                        <Zap className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-yellow-500" />
                       </div>
-                      
+            
                       {/* Dashed Orbit Rings */}
-                      <div 
-                        className="absolute w-[310px] h-[310px] rounded-full border-2 border-dashed border-[#544A07]"
-                        style={{
-                          borderStyle: 'dashed',
-                          borderWidth: '2px'
-                        }}
+                      <div
+                        className="absolute w-[180px] h-[180px] sm:w-[250px] sm:h-[250px] lg:w-[310px] lg:h-[310px] rounded-full border-2 border-dashed border-[#544A07]"
                       ></div>
-                      <div 
-                        className="absolute w-[490px] h-[490px] rounded-full border-2 border-dashed border-[#544A07]"
-                        style={{
-                          borderStyle: 'dashed',
-                          borderWidth: '2px'
-                        }}
+                      <div
+                        className="absolute w-[240px] h-[240px] sm:w-[350px] sm:h-[350px] lg:w-[490px] lg:h-[490px] rounded-full border-2 border-dashed border-[#544A07]"
                       ></div>
-                      
+            
                       {/* Orbiting Icons */}
-                      {orbitingIcons.map((planet, index) => {
-                        const radian = (planet.angle * Math.PI) / 180;
+                      {orbitingIcons.map((planet: OrbitingIcon, index: number) => {
+                        const IconComponent = planet.icon;
+                        
+                        // Separate inner and outer orbit icons and distribute them evenly
+                        const innerIcons = orbitingIcons.filter(p => p.position === 'inner');
+                        const outerIcons = orbitingIcons.filter(p => p.position === 'outer');
+                        
+                        let initialRotation = 0;
+                        if (planet.position === 'inner') {
+                          const innerIndex = innerIcons.findIndex(p => p === planet);
+                          initialRotation = (innerIndex * 360 / innerIcons.length);
+                        } else {
+                          const outerIndex = outerIcons.findIndex(p => p === planet);
+                          initialRotation = (outerIndex * 360 / outerIcons.length);
+                        }
                         
                         return (
                           <div
                             key={index}
-                            className={`absolute w-12 h-12 ${planet.color} rounded-full flex items-center justify-center shadow-lg z-20 ${
-                              planet.position === 'inner' ? 'orbit-inner' : 'orbit-outer'
-                            }`}
+                            className={`absolute w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 ${planet.color} rounded-full flex items-center justify-center shadow-lg z-20 ${getAnimationClass(planet.position)}`}
                             style={{
                               left: '50%',
                               top: '50%',
-                              animationDelay: `${index * 2}s`,
-                              transform: `translate(-50%, -50%) rotate(${planet.angle}deg) translateX(${
-                                planet.position === 'inner' ? '150px' : '200px'
-                              }) rotate(-${planet.angle}deg)`
+                              animationDelay: `${-initialRotation / 36}s`, // Convert degrees to seconds for offset
                             }}
                           >
-                            <planet.icon className="w-6 h-6 text-white" />
+                            <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                           </div>
                         );
                       })}

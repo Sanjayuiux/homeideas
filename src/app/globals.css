@@ -31,22 +31,63 @@ body {
     text-wrap: balance;
   }
 }
-
-
-@keyframes orbit-inner {
-  from { transform: translate(-50%, -50%) rotate(0deg) translateX(150px) rotate(0deg); }
-  to { transform: translate(-50%, -50%) rotate(360deg) translateX(150px) rotate(-360deg); }
+/* Mobile Animations (default - smallest screens first) */
+@keyframes orbit-inner-mobile {
+  from { transform: translate(-50%, -50%) rotate(0deg) translateX(90px) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg) translateX(90px) rotate(-360deg); }
 }
 
-@keyframes orbit-outer {
-  from { transform: translate(-50%, -50%) rotate(0deg) translateX(245px) rotate(0deg); }
-  to { transform: translate(-50%, -50%) rotate(360deg) translateX(245px) rotate(-360deg); }
+@keyframes orbit-outer-mobile {
+  from { transform: translate(-50%, -50%) rotate(0deg) translateX(120px) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg) translateX(120px) rotate(-360deg); }
 }
 
-.orbit-inner {
-  animation: orbit-inner 10s linear infinite;
+.orbit-inner-mobile { 
+  animation: orbit-inner-mobile 10s linear infinite; 
 }
 
-.orbit-outer {
-  animation: orbit-outer 20s linear infinite;
+.orbit-outer-mobile { 
+  animation: orbit-outer-mobile 20s linear infinite; 
+}
+
+/* Tablet Animations (641px and up) */
+@media (min-width: 641px) {
+  @keyframes orbit-inner-tablet {
+    from { transform: translate(-50%, -50%) rotate(0deg) translateX(125px) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg) translateX(125px) rotate(-360deg); }
+  }
+
+  @keyframes orbit-outer-tablet {
+    from { transform: translate(-50%, -50%) rotate(0deg) translateX(175px) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg) translateX(175px) rotate(-360deg); }
+  }
+
+  .orbit-inner-tablet { 
+    animation: orbit-inner-tablet 10s linear infinite; 
+  }
+
+  .orbit-outer-tablet { 
+    animation: orbit-outer-tablet 20s linear infinite; 
+  }
+}
+
+/* Desktop Animations (1025px and up) */
+@media (min-width: 1025px) {
+  @keyframes orbit-inner-desktop {
+    from { transform: translate(-50%, -50%) rotate(0deg) translateX(155px) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg) translateX(155px) rotate(-360deg); }
+  }
+
+  @keyframes orbit-outer-desktop {
+    from { transform: translate(-50%, -50%) rotate(0deg) translateX(245px) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg) translateX(245px) rotate(-360deg); }
+  }
+
+  .orbit-inner-desktop { 
+    animation: orbit-inner-desktop 10s linear infinite; 
+  }
+
+  .orbit-outer-desktop { 
+    animation: orbit-outer-desktop 20s linear infinite; 
+  }
 }
