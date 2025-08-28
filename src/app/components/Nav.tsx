@@ -19,6 +19,11 @@ export default function Navigation() {
     { href: "/contact-us", label: "Contact" },
   ];
 
+  const normalizePath = (path:any) => {
+    if (path === "/") return path; // keep homepage as "/"
+    return path.endsWith("/") ? path.slice(0, -1) : path;
+  };
+
   return (
     <>
       <nav
@@ -41,19 +46,23 @@ export default function Navigation() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              {links.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className={`relative pb-1 transition-colors ${
-                    pathname === link.href
-                      ? "text-[#B59F0E] font-medium after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#B59F0E] after:rounded-full"
-                      : "text-gray-600 hover:text-gray-900"
-                  }`}
-                >
-                  {link.label}
-                </a>
-              ))}
+              {links.map((link) => {
+                const isActive = normalizePath(pathname) === link.href;
+
+                return (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className={`relative pb-1 transition-colors ${
+                      isActive
+                        ? "text-[#B59F0E] font-medium after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#B59F0E] after:rounded-full"
+                        : "text-gray-600 hover:text-gray-900"
+                    }`}
+                  >
+                    {link.label}
+                  </a>
+                );
+              })}
             </div>
 
             {/* Desktop Get Started Button */}
@@ -80,20 +89,24 @@ export default function Navigation() {
         {isMobileMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-md border-t border-gray-100">
-              {links.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={closeMobileMenu}
-                  className={`block px-3 py-2 rounded-md transition-colors ${
-                    pathname === link.href
-                      ? "text-[#B59F0E] font-medium bg-gray-100"
-                      : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
-                  }`}
-                >
-                  {link.label}
-                </a>
-              ))}
+              {links.map((link) => {
+                const isActive = normalizePath(pathname) === link.href;
+
+                return (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={closeMobileMenu}
+                    className={`block px-3 py-2 rounded-md transition-colors ${
+                      isActive
+                        ? "text-[#B59F0E] font-medium bg-gray-100"
+                        : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                    }`}
+                  >
+                    {link.label}
+                  </a>
+                );
+              })}
 
               <div className="pt-2">
                 <button
