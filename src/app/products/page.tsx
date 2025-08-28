@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronRight, Download, Play, Users, Database, Globe, Shield, Code, Smartphone, BarChart3, Target, ArrowRight, Check, Star } from 'lucide-react';
 import Navigation from '../components/Nav';
 import Footer from '../components/Footer';
+import Link from 'next/link'
 
 const ProductsPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -88,14 +89,14 @@ const ProductsPage = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{product.title}</h3>
                 <h4 className="text-lg font-semibold text-gray-700 mb-3">{product.subtitle}</h4>
                 <p className="text-gray-600 mb-4 leading-relaxed">{product.description}</p>
-                <button className={`${
+                {/* <button className={`${
                   product.status === 'Learn More' 
                     ? 'bg-gradient-to-r from-yellow-400 to-orange-500 text-white' 
                     : 'bg-gray-100 text-gray-600'
                 } px-4 py-2 rounded-full font-semibold transition-all duration-300 hover:shadow-md flex items-center`}>
                   {product.status}
                   {product.status === 'Learn More' && <ChevronRight className="ml-2 w-4 h-4" />}
-                </button>
+                </button> */}
               </div>
             ))}
           </div>
@@ -127,12 +128,17 @@ const ProductsPage = () => {
               </div>
 
               <div className="flex gap-4">
-                <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                <Link
+                href="/contact-us" 
+                className="bg-gradient-to-r flex justify-center items-center from-yellow-400 to-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
                   Get Started
-                </button>
-                <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold border-2 border-gray-200 hover:border-gray-300 transition-colors flex items-center">
+                </Link>
+                <Link
+                href="https://play.google.com/store/apps/details?id=com.homeideastechnologies.hitfurnish" 
+                target='_blank'
+                className="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold border-2 border-gray-200 hover:border-gray-300 transition-colors flex items-center">
                   Download <Download className="ml-2 w-4 h-4" />
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -208,9 +214,9 @@ const ProductsPage = () => {
                   <button className="bg-gray-100 text-gray-600 px-6 py-3 rounded-full font-semibold">
                     Coming Soon
                   </button>
-                  <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold border-2 border-gray-200 hover:border-gray-300 transition-colors flex items-center">
+                  {/* <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold border-2 border-gray-200 hover:border-gray-300 transition-colors flex items-center">
                     Learn More <ArrowRight className="ml-2 w-4 h-4" />
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>
@@ -229,12 +235,15 @@ const ProductsPage = () => {
                 </p>
 
                 <div className="flex gap-4">
-                  <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold border-2 border-gray-200 hover:border-gray-300 transition-colors">
+                  {/* <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold border-2 border-gray-200 hover:border-gray-300 transition-colors">
                     Get Started
+                  </button> */}
+                  <button className="bg-gray-100 text-gray-600 px-6 py-3 rounded-full font-semibold">
+                    Coming Soon
                   </button>
-                  <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center">
+                  {/* <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center">
                     Learn More <ArrowRight className="ml-2 w-4 h-4" />
-                  </button>
+                  </button> */}
                 </div>
               </div>
 
@@ -264,12 +273,14 @@ const ProductsPage = () => {
               Join thousands of professionals who trust HomeIdeas Technology for their business solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-                Get Started Today
-              </button>
-              <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold border-2 border-gray-200 hover:border-gray-300 transition-colors">
+              <Link 
+              href="/contact-us"
+              className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                Contact Us 
+              </Link>
+              {/* <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold border-2 border-gray-200 hover:border-gray-300 transition-colors">
                 Contact Sales
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
