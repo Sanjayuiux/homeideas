@@ -110,44 +110,44 @@ export default function TermsConditionsPage() {
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-[url('/assets/images/homeideas_bg.jpg')] bg-cover bg-center">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center">
-      <h1 className="font-bold text-gray-900 mb-6">
-        <span
-          className={`block text-[50px] leading-tight transition-all duration-1000 delay-300 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
-        >
-          Terms of Service
-        </span>
-        <span
-          className={`block text-[32px] leading-tight text-[#B59F0E] transition-all duration-1000 delay-500 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
-        >
-          Your Agreement with Us
-        </span>
-      </h1>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="font-bold text-gray-900 mb-6">
+              <span
+                className={`block text-[50px] leading-tight transition-all duration-1000 delay-300 ${
+                  isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                }`}
+              >
+                Terms of Service
+              </span>
+              <span
+                className={`block text-[32px] leading-tight text-[#B59F0E] transition-all duration-1000 delay-500 ${
+                  isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                }`}
+              >
+                Your Agreement with Us
+              </span>
+            </h1>
 
-      <p
-        className={`text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-700 ${
-          isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-        }`}
-      >
-        These terms govern your use of our cloud-based software solutions and
-        define our mutual responsibilities.
-      </p>
+            <p
+              className={`text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-700 ${
+                isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+              }`}
+            >
+              These terms govern your use of our cloud-based software solutions and
+              define our mutual responsibilities.
+            </p>
 
-      <span
-        className={`text-gray-700 font-semibold inline-block transition-all duration-1000 delay-900 ${
-          isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-        }`}
-      >
-        Effective Date: January 1, 2024
-      </span>
-    </div>
-  </div>
-</section>
+            <span
+              className={`text-gray-700 font-semibold inline-block transition-all duration-1000 delay-700 ${
+                isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+              }`}
+            >
+              Effective Date: January 1, 2024
+            </span>
+          </div>
+        </div>
+      </section>
 
 
       {/* Main Terms Sections */}
