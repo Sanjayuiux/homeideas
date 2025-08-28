@@ -112,7 +112,7 @@ export default function ContactPage() {
       {/* Contact Form Section */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-100">
+          <div className="bg-white rounded-3xl shadow-lg p-8 md:p-12 border border-gray-100">
             <div className="space-y-8">
               {/* Name Fields */}
               <div className="grid md:grid-cols-2 gap-6">
