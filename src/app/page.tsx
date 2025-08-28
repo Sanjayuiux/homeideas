@@ -1,11 +1,11 @@
   'use client'
 
   import { useState, useEffect } from 'react'
-  import Head from 'next/head'
   import { ChevronRight, Play, Star, Users, Zap, Shield,
     Smartphone, Code, Database, Globe, Cloud, Cpu, Target, BarChart3 } from 'lucide-react'
   import Navigation from './components/Nav'
   import Footer from './components/Footer'
+  import Link from "next/link";
 
   export default function HomePage() {
     const [isVisible, setIsVisible] = useState(false)
@@ -53,13 +53,15 @@
                   Unlock business potential with cutting-edge solutions that are designed to make your workflow smarter, faster, and more efficient than ever before.
                 </p>
                 <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-                  <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center">
+                  <Link 
+                  href="/contact-us"
+                  className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center">
                     Get Started Today
                     <ChevronRight className="ml-2 w-5 h-5" />
-                  </button>
-                  <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold border-2 border-gray-200 hover:border-gray-300 transition-colors">
+                  </Link>
+                  {/* <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold border-2 border-gray-200 hover:border-gray-300 transition-colors">
                     Watch Demo
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>
@@ -135,14 +137,14 @@
                     From project management to customer relations, our solutions integrate seamlessly
                     with your existing workflows while providing advanced features that set you apart from the competition.
                   </p>
-                  <div className="flex gap-4">
+                  {/* <div className="flex gap-4">
                     <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
                       Learn More
                     </button>
                     <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold border-2 border-gray-200 hover:border-gray-300 transition-colors">
                       View Demo
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -393,12 +395,14 @@
                     Ready to transform your business with our innovative solutions? Get started today and experience the difference.
                   </p>
                   <div className="flex gap-4">
-                    <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-                      Get Started
-                    </button>
-                    <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold border-2 border-gray-200 hover:border-gray-300 transition-colors">
+                    <Link
+                    href="/contact-us"
+                    className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
                       Contact Us
-                    </button>
+                    </Link>
+                    {/* <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold border-2 border-gray-200 hover:border-gray-300 transition-colors">
+                      Contact Us
+                    </button> */}
                   </div>
                 </div>
                 <div className="relative">
