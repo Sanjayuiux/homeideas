@@ -305,7 +305,7 @@
               <div key={index} className="group h-full">
                 <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all  duration-300 transform hover:-translate-y-2 flex flex-col gap-3 h-full">
                   {/* Image section */}
-                  <div className="w-full h-48 rounded-xl mb-2 md:mb-0 lg:mb-6  flex items-center justify-center ">
+                  <div className="w-full h-48 md:h-fit rounded-xl mb-2 md:mb-0 lg:mb-6  flex items-center justify-center ">
                     <img src={item.image} alt={item.title} className="rounded-xl"/>
                   </div>
 
