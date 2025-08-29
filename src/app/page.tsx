@@ -331,7 +331,7 @@
 
 
           {/* Enhance Section */}
-          <section className="pt-10 lg:py-20 bg-gray-50">
+          <section className="pt-10 py-20 lg:py-20 bg-gray-50">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16 flex flex-col items-center gap-3">
         <div className="relative inline-block">
