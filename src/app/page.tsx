@@ -103,10 +103,12 @@
           </section>
 
           {/* About Section */}
-          <section className="py-20" id='about'>
+          <section className="py-20" id="about">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid lg:grid-cols-2 gap-16 items-center">
-                <div className="space-y-6 flex flex-col gap-8">
+              <div className="grid lg:grid-cols-2 gap-16 items-center md:text-center lg:text-left md:justify-center lg:justify-start">
+                
+                {/* Left content */}
+                <div className="space-y-6 flex flex-col gap-8 items-center md:items-center lg:items-start md:text-center lg:text-left">
                   <div className="relative inline-block">
                     <h2 className="relative z-10 text-4xl md:text-5xl font-bold text-gray-900">
                       About Us
@@ -115,12 +117,11 @@
                     <img
                       src="/assets/icons/about_us_underline.svg"
                       alt="underline"
-                      className="absolute -bottom-8 left-0  -z-0 mt-2"
-                      // style={{ filter: 'brightness(0) saturate(100%) invert(92%) sepia(30%) saturate(633%) hue-rotate(358deg) brightness(103%) contrast(104%)' }}
+                      className="absolute -bottom-8 left-1/2 md:-translate-x-1/2 lg:left-0 lg:translate-x-0 -z-0 mt-2"
                     />
                   </div>
 
-                  <div className='space-y-6'>
+                  <div className="space-y-6 max-w-2xl">
                     <h3 className="text-2xl font-semibold text-gray-700">
                       Who We Are: Innovators in Digital Solutions for Design and Construction
                     </h3>
@@ -133,22 +134,26 @@
                   </div>
                 </div>
 
-                <div className="relative">
-                  <img src="/assets/images/About_us.jpg" alt="About Us" />
+                {/* Right image */}
+                <div className="relative flex justify-center lg:justify-end">
+                  <img src="/assets/images/About_us.jpg" alt="About Us" className="rounded-xl" />
                 </div>
               </div>
             </div>
           </section>
 
-
           {/* Innovation Section */}
           <section className="py-10 lg:py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid lg:grid-cols-2 gap-16 items-center">
-                <div className="relative">
-                  <img src="/assets/images/Innovate.jpg" />
+                
+                {/* Image (left on desktop, bottom on mobile/tablet) */}
+                <div className="relative order-2 lg:order-1 flex justify-center lg:justify-start">
+                  <img src="/assets/images/Innovate.jpg" alt="Innovate" className="rounded-xl" />
                 </div>
-                <div className="space-y-6">
+
+                {/* Content (first on mobile/tablet, right on desktop) */}
+                <div className="space-y-6 order-1 lg:order-2 text-center md:text-center lg:text-left flex flex-col items-center lg:items-start">
                   {/* Innovate heading with underline */}
                   <div className="relative inline-block">
                     <span className="relative z-10 text-[40px] font-semibold text-gray-900">
@@ -157,33 +162,26 @@
                     <img
                       src="/assets/icons/innovate_underline.svg"
                       alt="underline"
-                      className="absolute -bottom-2 left-0 w-[300px] -z-0"
+                      className="absolute -bottom-2 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 w-[300px] -z-0"
                     />
                   </div>
 
-                  <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+                  <h2 className="text-4xl md:text-5xl font-bold text-gray-900 max-w-2xl">
                     Transforming Workflows with Innovative Applications
                   </h2>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed max-w-2xl">
                     Our innovative applications are designed to streamline your business processes,
                     increase productivity, and drive growth. Experience the future of business management today.
                   </p>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed max-w-2xl">
                     From project management to customer relations, our solutions integrate seamlessly
                     with your existing workflows while providing advanced features that set you apart from the competition.
                   </p>
-                  {/* <div className="flex gap-4">
-                    <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-                      Learn More
-                    </button>
-                    <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold border-2 border-gray-200 hover:border-gray-300 transition-colors">
-                      View Demo
-                    </button>
-                  </div> */}
                 </div>
               </div>
             </div>
           </section>
+
           {/* What We Do Section */}
           <section className="py-20 bg-[url('/assets/images/homeideas_bg.jpg')] bg-cover bg-center min-h-screen flex items-center" id='services'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
