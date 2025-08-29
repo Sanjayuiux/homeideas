@@ -188,36 +188,40 @@ export default function HomePage() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
-            {[
-            {
-                title: "Empowering Professionals with the Professional Bay App",
-                image: "/assets/images/b1.jpg",
-                description: "HomeIdeas.in connects customers with local vendors,making home project sourcing seamless"
-            },
-            {
-                title: "Professional Bay: Your Portfolio and Networking Hub",
-                image: "/assets/images/b2.jpg",
-                description: "Showcase your work, connect with clients, and access powerful AI tools"
-            },
-            {
-                title: "Unlock Opportunities with Our Comprehensive Vendor Network",
-                image: "/assets/images/b3.jpg",
-                description: "Collaborate with local vendors and expand your business reach effortlessly."
-            }
-            ].map((item, index) => (
-            <div key={index} className="group">
-                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="w-full h-48 bg-gray-100 rounded-xl flex items-center justify-center mb-6">
-                    <img src={item.image} alt={item.title} className='rounded-xl '/>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-500 transition-colors">
-                    {item.title}
-                </h3>
-                <p className="text-gray-600 mb-4">{item.description}</p>
-                </div>
-            </div>
-            ))}
+  {[
+    {
+      title: "Empowering Professionals with the Professional Bay App",
+      image: "/assets/images/b1.jpg",
+      description:
+        "HomeIdeas.in connects customers with local vendors,making home project sourcing seamless",
+    },
+    {
+      title: "Professional Bay: Your Portfolio and Networking Hub",
+      image: "/assets/images/b2.jpg",
+      description:
+        "Showcase your work, connect with clients, and access powerful AI tools",
+    },
+    {
+      title: "Unlock Opportunities with Our Comprehensive Vendor Network",
+      image: "/assets/images/b3.jpg",
+      description:
+        "Collaborate with local vendors and expand your business reach effortlessly.",
+    },
+  ].map((item, index) => (
+    <div key={index} className="group h-full">
+      <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full">
+        <div className="w-full h-48 md:h-fit  rounded-xl flex items-center justify-center mb-6">
+          <img src={item.image} alt={item.title} className="rounded-xl" />
         </div>
+        <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-500 transition-colors">
+          {item.title}
+        </h3>
+        <p className="text-gray-600 mb-4 flex-grow">{item.description}</p>
+      </div>
+    </div>
+  ))}
+</div>
+
         </section>
 
         <section className="py-20 relative">
