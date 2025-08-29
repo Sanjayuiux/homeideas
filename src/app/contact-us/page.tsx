@@ -84,7 +84,7 @@ export default function ContactPage() {
                 title: "Email Us",
                 info: "hello@homeideas.com",
                 subtitle: "We'll respond within 24hrs",
-                href:""
+                href:"mailto:hello@homeideas.com"
               },
               {
                 icon: MapPin,
