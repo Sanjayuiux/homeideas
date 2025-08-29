@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
@@ -8,11 +9,12 @@ const Footer = () => {
           <div className="grid lg:grid-cols-3 gap-12 mb-16">
             {/* Newsletter Section */}
             <div className="lg:col-span-2">
-              <a href="/">
+              <Link 
+              href="/">
                 <div className="flex items-center mb-6">
                   <img src="/assets/images/logo.svg" className='w-[200px] lg:w-[330px]' alt="" />
                 </div>
-              </a>
+              </Link>
               
               <p className="text-lg text-gray-700 mb-6">
                 Join our newsletter to stay up to date on features and releases.

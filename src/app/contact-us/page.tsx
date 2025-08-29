@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { ChevronDown, Mail, Phone, MapPin, Clock } from 'lucide-react'
 import Navigation from '../components/Nav'
 import Footer from '../components/Footer'
+import Link from 'next/link'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -94,7 +95,7 @@ export default function ContactPage() {
                 href: "https://maps.app.goo.gl/JU9XXXdJoKhLH2N76"
               }
             ].map((item, index) => (
-              <a key={index} href={item.href} target='_blank' className="bg-white rounded-2xl p-6 shadow-lg 
+              <Link key={index} href={item.href} target='_blank' className="bg-white rounded-2xl p-6 shadow-lg 
               hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border 
               border-gray-100 flex flex-col  items-center text-center ">
                 <div className="w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center mb-4">
@@ -103,7 +104,7 @@ export default function ContactPage() {
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-900 font-semibold mb-1">{item.info}</p>
                 <p className="text-gray-600 text-sm">{item.subtitle}</p>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
