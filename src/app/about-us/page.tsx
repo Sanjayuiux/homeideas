@@ -98,36 +98,35 @@ export default function HomePage() {
 
         
         {/* Our vision */}
-        <section className="py-20" id='about'>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-                <div className="relative overflow-hidden rounded-[20px]">
-                <img src="/assets/images/about_us/about_us_2.jpg" alt="About Us" />
-              </div>
-              <div className="space-y-6">
-                <div className="relative inline-block">
-                  <h2 className="relative z-10 text-4xl md:text-5xl font-bold text-gray-900">
-                    Our Vision
-                  </h2>
-                  {/* underline brush vector
-                  <img
-                    src="/assets/icons/underline.svg"
-                    alt="underline"
-                    className="absolute -bottom-4 left-0 w-[220px] md:w-[260px] -z-0"
-                    // style={{ filter: 'brightness(0) saturate(100%) invert(92%) sepia(30%) saturate(633%) hue-rotate(358deg) brightness(103%) contrast(104%)' }}
-                  /> */}
-                </div>
+        <section className="pt-6 py-20 lg:py-20 " id="about">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid lg:grid-cols-2 gap-16 items-center">
+      
+      {/* Text content (first on mobile, right on desktop) */}
+      <div className="space-y-6 order-1 lg:order-2 text-center md:text-center lg:text-left flex flex-col items-center lg:items-start">
+        <div className="relative inline-block">
+          <h2 className="relative z-10 text-4xl md:text-5xl font-bold text-gray-900">
+            Our Vision
+          </h2>
+        </div>
 
-                {/* <h3 className="text-2xl font-semibold text-gray-700">
-                  Who We Are: Innovators in Digital Solutions for Design and Construction
-                </h3> */}
-                <p className="text-gray-600 leading-relaxed">
-                  We aim to become the world’s most comprehensive digital platform for the home industry, uniting millions of shop owners, professionals, and customers under one ecosystem. By combining SaaS tools, AI innovation, and lead generation, we empower small and medium businesses to compete in the digital era—while giving customers the confidence to “See Before You Buy.”
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <p className="text-gray-600 leading-relaxed max-w-2xl">
+          We aim to become the world’s most comprehensive digital platform for the home industry, uniting millions of shop owners, professionals, and customers under one ecosystem. By combining SaaS tools, AI innovation, and lead generation, we empower small and medium businesses to compete in the digital era—while giving customers the confidence to “See Before You Buy.”
+        </p>
+      </div>
+
+      {/* Image (below text on mobile, left on desktop) */}
+      <div className="relative order-2 lg:order-1 overflow-hidden rounded-[20px] flex justify-center lg:justify-start h-[300px] md:h-[400px] lg:h-[450px]">
+        <img
+          src="/assets/images/about_us/about_us_2.jpg"
+          alt="About Us"
+          className="absolute inset-0 w-full h-full object-cover object-center rounded-[20px]"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
 
         {/* Innovation Section */}
         <section className="py-20 bg-[url('/assets/images/homeideas_bg.jpg')] bg-cover bg-center">
