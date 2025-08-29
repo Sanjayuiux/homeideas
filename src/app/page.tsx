@@ -12,7 +12,7 @@
   type OrbitPosition = 'inner' | 'outer';
 
   interface OrbitingIcon {
-    icon: LucideIcon;
+    iconPath: string;
     color: string;
     position: OrbitPosition;
   }
@@ -49,15 +49,16 @@
   }, []);
 
   const orbitingIcons: OrbitingIcon[] = [
-    { icon: Users, color: 'bg-orange-500', position: 'inner' },
-    { icon: Shield, color: 'bg-pink-500', position: 'outer' },
-    { icon: BarChart3, color: 'bg-red-500', position: 'inner' },
-    { icon: Smartphone, color: 'bg-blue-500', position: 'outer' },
-    { icon: CheckCircle, color: 'bg-green-500', position: 'inner' },
-    { icon: Code, color: 'bg-emerald-500', position: 'outer' },
-    { icon: Smartphone, color: 'bg-orange-600', position: 'inner' },
-    { icon: Play, color: 'bg-blue-600', position: 'outer' }
-  ];
+  { iconPath: '/assets/icons/ai.svg', color: 'bg-[#FFBF60]', position: 'inner' },
+  { iconPath: '/assets/icons/bull-market.svg', color: 'bg-[#FF5758]', position: 'outer' },
+  { iconPath: '/assets/icons/cloud.svg', color: 'bg-[#FF5758]', position: 'inner' },
+  { iconPath: '/assets/icons/hand.svg', color: 'bg-[#37A3FF]', position: 'outer' },
+  { iconPath: '/assets/icons/home-favorites.svg', color: 'bg-[#00CA75]', position: 'inner' },
+  { iconPath: '/assets/icons/VR.svg', color: 'bg-[#00CA75]', position: 'outer' },
+  { iconPath: '/assets/icons/paper-scroll-3.svg', color: 'bg-[#FFBF60]', position: 'inner' },
+  { iconPath: '/assets/icons/pencil-in-draft.svg', color: 'bg-[#37A3FF]', position: 'outer' },
+  { iconPath: '/assets/icons/server.svg', color: 'bg-[#37A3FF]', position: 'outer' },
+];
 
   const getAnimationClass = (position: OrbitPosition): string => {
     return `orbit-${position}-${screenSize}`;
@@ -184,91 +185,93 @@
 
           {/* What We Do Section */}
           <section className="py-20 bg-[url('/assets/images/homeideas_bg.jpg')] bg-cover bg-center min-h-screen flex items-center" id='services'>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <div className="grid lg:grid-cols-2 gap-16 items-center">
-                    
-                    {/* Content Side */}
-                    <div className="space-y-8 max-w-lg">
-                      <div className="space-y-6">
-                        <div>
-                          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                            What We Do
-                          </h2>
-                          <img src="/assets/icons/what_we_do_underline.svg" alt="" />
-                        </div>
-                        
-                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">
-                          Empowering Professionals with Innovative, Scalable Solutions for the Future
-                        </h3>
-                        
-                        <p className="text-black/40 leading-relaxed text-lg">
-                          We provide design and construction professionals with 
-                          smart solutions that enhance productivity and streamline 
-                          workflows for design and construction professionals. Our 
-                          mission is to empower you with tools that adapt to your 
-                          needs and drive success.
-                        </p>
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                  
+                  {/* Content Side */}
+                  <div className="space-y-8 max-w-lg">
+                    <div className="space-y-6">
+                      <div>
+                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                          What We Do
+                        </h2>
+                        <img src="/assets/icons/what_we_do_underline.svg" alt="" />
                       </div>
+                      
+                      <h3 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">
+                        Empowering Professionals with Innovative, Scalable Solutions for the Future
+                      </h3>
+                      
+                      <p className="text-black/40 leading-relaxed text-lg">
+                        We provide design and construction professionals with 
+                        smart solutions that enhance productivity and streamline 
+                        workflows for design and construction professionals. Our 
+                        mission is to empower you with tools that adapt to your 
+                        needs and drive success.
+                      </p>
                     </div>
-                    
-                    {/* Planetary Animation Side */}
-                    <div className="relative flex items-center justify-center h-[300px] sm:h-[400px] lg:h-[600px]">
-                      {/* Central Hub */}
-                      <div className="relative z-10 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white rounded-xl flex items-center justify-center shadow-lg">
-                        <img 
-                          src="/assets/images/hi-logo.svg" 
-                          alt="Logo" 
-                          className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 object-contain"
-                        />
-                      </div>
-            
-                      {/* Dashed Orbit Rings */}
-                      <div
-                        className="absolute w-[180px] h-[180px] sm:w-[250px] sm:h-[250px] lg:w-[310px] lg:h-[310px] rounded-full border-2 border-dashed border-[#544A07]"
-                      ></div>
-                      <div
-                        className="absolute w-[290px] h-[290px] sm:w-[390px] sm:h-[390px] lg:w-[490px] lg:h-[490px] rounded-full border-2 border-dashed border-[#544A07]"
-                      ></div>
-            
-                      {orbitingIcons.map((planet: OrbitingIcon, index: number) => {
-                        const IconComponent = planet.icon;
-                        
-                        // Separate inner and outer orbit icons and distribute them evenly
-                        const innerIcons = orbitingIcons.filter(p => p.position === 'inner');
-                        const outerIcons = orbitingIcons.filter(p => p.position === 'outer');
-                        
-                        let initialRotation = 0;
-                        if (planet.position === 'inner') {
-                          // FOR INNER ICONS: Position them in plus structure (N, E, S, W)
-                          const innerIndex = innerIcons.findIndex(p => p === planet);
-                          const plusPositions = [0, 90, 180, 270]; // N, E, S, W positions
-                          initialRotation = plusPositions[innerIndex % plusPositions.length];
-                        } else {
-                          // FOR OUTER ICONS: Position them in diagonal positions (NE, SE, SW, NW)
-                          const outerIndex = outerIcons.findIndex(p => p === planet);
-                          const diagonalPositions = [45, 135, 225, 315]; // NE, SE, SW, NW positions
-                          initialRotation = diagonalPositions[outerIndex % diagonalPositions.length];
-                        }
-                        
-                        return (
-                          <div
-                            key={index}
-                            className={`absolute w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 ${planet.color} rounded-full flex items-center justify-center shadow-lg z-20 ${getAnimationClass(planet.position)}`}
-                            style={{
-                              left: '50%',
-                              top: '50%',
-                              animationDelay: `${-initialRotation / 36}s`, // Convert degrees to seconds for offset
-                            }}
-                          >
-                            <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
-                          </div>
-                        );
-                      })}
-                    </div>
-                    
                   </div>
+                  
+                  {/* Planetary Animation Side */}
+                  <div className="relative flex items-center justify-center h-[300px] sm:h-[400px] lg:h-[600px]">
+                    {/* Central Hub */}
+                    <div className="relative z-10 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white rounded-xl flex items-center justify-center shadow-lg">
+                      <img 
+                        src="/assets/images/hi-logo.svg" 
+                        alt="Logo" 
+                        className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 object-contain"
+                      />
+                    </div>
+          
+                    {/* Dashed Orbit Rings */}
+                    <div
+                      className="absolute w-[180px] h-[180px] sm:w-[250px] sm:h-[250px] lg:w-[310px] lg:h-[310px] rounded-full border-2 border-dashed border-[#544A07]"
+                    ></div>
+                    <div
+                      className="absolute w-[290px] h-[290px] sm:w-[390px] sm:h-[390px] lg:w-[490px] lg:h-[490px] rounded-full border-2 border-dashed border-[#544A07]"
+                    ></div>
+          
+                    {orbitingIcons.map((planet: OrbitingIcon, index: number) => {
+                      // Separate inner and outer orbit icons and distribute them evenly
+                      const innerIcons = orbitingIcons.filter(p => p.position === 'inner');
+                      const outerIcons = orbitingIcons.filter(p => p.position === 'outer');
+                      
+                      let initialRotation = 0;
+                      if (planet.position === 'inner') {
+                        // FOR INNER ICONS: Position them in plus structure (N, E, S, W)
+                        const innerIndex = innerIcons.findIndex(p => p === planet);
+                        const plusPositions = [0, 90, 180, 270]; // N, E, S, W positions
+                        initialRotation = plusPositions[innerIndex % plusPositions.length];
+                      } else {
+                        // FOR OUTER ICONS: Position them in diagonal positions (NE, SE, SW, NW)
+                        const outerIndex = outerIcons.findIndex(p => p === planet);
+                        const diagonalPositions = [45, 135, 225, 315]; // NE, SE, SW, NW positions
+                        initialRotation = diagonalPositions[outerIndex % diagonalPositions.length];
+                      }
+                      
+                      return (
+                        <div
+                          key={index}
+                          className={`absolute w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 ${planet.color} rounded-full flex items-center justify-center shadow-lg z-20 ${getAnimationClass(planet.position)}`}
+                          style={{
+                            left: '50%',
+                            top: '50%',
+                            animationDelay: `${-initialRotation / 36}s`, // Convert degrees to seconds for offset
+                          }}
+                        >
+                          <img 
+                            src={planet.iconPath} 
+                            alt="icon" 
+                            className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white filter brightness-0 invert"
+                          />
+                        </div>
+                      );
+                    })}
+                  </div>
+                  
                 </div>
-              </section>
+              </div>
+            </section>
 
           {/* Smart Solutions Section */}
         <section className="py-20 relative">
