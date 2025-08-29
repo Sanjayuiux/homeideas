@@ -131,47 +131,44 @@ export default function HomePage() {
 
         {/* Innovation Section */}
         <section className="py-20 bg-[url('/assets/images/homeideas_bg.jpg')] bg-cover bg-center">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="relative">
-                <img 
-                  src="/assets/images/Innovate.jpg" 
-                  className="rounded-tl-[55px] rounded-br-[55px]" 
-                  alt="Innovate"
-                />
-              </div>
-              <div className="space-y-6">
-                {/* Innovate heading with underline */}
-                <div className="relative inline-block">
-                  <span className="relative z-10 text-[40px] font-semibold text-gray-900">
-                    Our Ecosystem
-                  </span>
-                  {/* <img
-                    src="/assets/icons/underline.svg"
-                    alt="underline"
-                    className="absolute -bottom-2 left-0 w-[120px] -z-0"
-                  /> */}
-                </div>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid lg:grid-cols-2 gap-16 items-center">
+      
+      {/* Content first on mobile, left-aligned on desktop */}
+      <div className="order-1 lg:order-1 space-y-6 text-center lg:text-left">
+        {/* Heading */}
+        <div className="relative inline-block">
+          <span className="relative z-10 text-[32px] md:text-[40px] font-semibold text-gray-900">
+            Our Ecosystem
+          </span>
+        </div>
 
-                {/* <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-                  Transforming Workflows with Innovative Applications
-                </h2> */}
-                <p className="text-gray-600 leading-relaxed">
-                  We operate through a suite of specialized products and platforms that work seamlessly together:
-                </p>
-                <p className="text-gray-600 leading-relaxed">
-                  Hit Furnish – The world’s first AI curtain & furnishing visualizer that lets shop owners and customers preview fabrics, wallpapers, blinds, and flooring in real room photos.
-                </p>
-                <p className="text-gray-600 leading-relaxed">
-                  Hit Flooring, Hit Furniture, Hit Lights, Hit Windows & Doors, Hit Security Systems – A growing suite of apps built to empower shop owners across categories with software + lead generation tools.
-                </p>
-                <p className="text-gray-600 leading-relaxed">
-                  Each Hit app gives vendors digital catalogs, customer engagement tools, and AI visualizers—helping them modernize their business while staying connected to local buyers.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <p className="text-gray-600 leading-relaxed">
+          We operate through a suite of specialized products and platforms that work seamlessly together:
+        </p>
+        <p className="text-gray-600 leading-relaxed">
+          Hit Furnish – The world’s first AI curtain & furnishing visualizer that lets shop owners and customers preview fabrics, wallpapers, blinds, and flooring in real room photos.
+        </p>
+        <p className="text-gray-600 leading-relaxed">
+          Hit Flooring, Hit Furniture, Hit Lights, Hit Windows & Doors, Hit Security Systems – A growing suite of apps built to empower shop owners across categories with software + lead generation tools.
+        </p>
+        <p className="text-gray-600 leading-relaxed">
+          Each Hit app gives vendors digital catalogs, customer engagement tools, and AI visualizers—helping them modernize their business while staying connected to local buyers.
+        </p>
+      </div>
+
+      {/* Image second on mobile, left on desktop */}
+      <div className="order-2 lg:order-2 relative flex justify-center">
+        <img 
+          src="/assets/images/Innovate.jpg" 
+          className="rounded-tl-[40px] rounded-br-[40px] w-full max-w-md lg:max-w-full" 
+          alt="Innovate"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
         
 
         <section className="py-20 relative">
