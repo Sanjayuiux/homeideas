@@ -1,14 +1,21 @@
 'use client'
 import { useState, useEffect } from 'react'
-import { Shield, Eye, Lock, Users, FileText, Globe, Mail, Phone } from 'lucide-react'
+import { Shield, Eye, Lock, Users, FileText, Globe, Mail, Phone, Link } from 'lucide-react'
 import Navigation from '../components/Nav'
 import Footer from '../components/Footer'
 
 export default function PrivacyPolicyPage() {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(true) // Start as true to match server render
+
+  // Optional: You can still have animations, but use a different approach
+  const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
-    setIsVisible(true)
+    // Small delay to ensure smooth animation after hydration
+    const timer = setTimeout(() => {
+      setIsLoaded(true)
+    }, 100)
+    return () => clearTimeout(timer)
   }, [])
 
   const privacySections = [
@@ -96,13 +103,12 @@ export default function PrivacyPolicyPage() {
       <Navigation />
 
       {/* Hero Section */}
-      {/* <section className="pt-24 pb-16 bg-gradient-to-br from-yellow-50 to-orange-50"> */}
       <section className="pt-24 pb-16 bg-[url('/assets/images/homeideas_bg.jpg')] bg-cover bg-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1
               className={`font-bold text-gray-900 mb-6 transition-all duration-1000 delay-300 ${
-                isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                isLoaded ? "translate-y-0 opacity-100" : "translate-y-0 opacity-100"
               }`}
             >
               <span className="block text-[50px] leading-tight">
@@ -115,7 +121,7 @@ export default function PrivacyPolicyPage() {
 
             <p
               className={`text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${
-                isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                isLoaded ? "translate-y-0 opacity-100" : "translate-y-0 opacity-100"
               }`}
             >
               We are committed to protecting your privacy and ensuring the security
@@ -124,7 +130,7 @@ export default function PrivacyPolicyPage() {
 
             <span
               className={`text-gray-700 font-semibold inline-block transition-all duration-1000 delay-700 ${
-                isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                isLoaded ? "translate-y-0 opacity-100" : "translate-y-0 opacity-100"
               }`}
             >
               Effective Date: January 1, 2024
@@ -219,8 +225,7 @@ export default function PrivacyPolicyPage() {
               </a>
             </div>
 
-            <a href="tel:+917200240860">
-              <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
               <div className="flex items-center mb-6">
                 <Phone className="w-8 h-8 text-orange-500 mr-3" />
                 <div>
@@ -232,21 +237,7 @@ export default function PrivacyPolicyPage() {
                 +91 72002 40860
               </a>
             </div>
-            </a>
           </div>
-
-          {/* <div className="mt-12 text-center">
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Data Protection Rights</h3>
-              <p className="text-gray-600 leading-relaxed">
-                If you have concerns about how we handle your personal data or wish to exercise your privacy rights, 
-                please don't hesitate to reach out. We're committed to addressing your concerns promptly and transparently.
-              </p>
-              <button className="mt-6 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-                Contact Privacy Team
-              </button>
-            </div>
-          </div> */}
         </div>
       </section>
       <Footer />

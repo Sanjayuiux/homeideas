@@ -3,9 +3,10 @@ import { useState, useEffect } from 'react'
 import { Shield, FileText, CreditCard, Users, Globe, Lock, AlertTriangle, Mail, Phone, MapPin } from 'lucide-react'
 import Navigation from '../components/Nav'
 import Footer from '../components/Footer'
+import Link from 'next/link'
 
 export default function TermsConditionsPage() {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(true) // Fix hydration issue
 
   useEffect(() => {
     setIsVisible(true)
@@ -115,14 +116,14 @@ export default function TermsConditionsPage() {
             <h1 className="font-bold text-gray-900 mb-6">
               <span
                 className={`block text-[50px] leading-tight transition-all duration-1000 delay-300 ${
-                  isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                  isVisible ? "translate-y-0 opacity-100" : "translate-y-0 opacity-100"
                 }`}
               >
                 Terms of Service
               </span>
               <span
                 className={`block text-[32px] leading-tight text-[#B59F0E] transition-all duration-1000 delay-500 ${
-                  isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                  isVisible ? "translate-y-0 opacity-100" : "translate-y-0 opacity-100"
                 }`}
               >
                 Your Agreement with Us
@@ -131,7 +132,7 @@ export default function TermsConditionsPage() {
 
             <p
               className={`text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-700 ${
-                isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                isVisible ? "translate-y-0 opacity-100" : "translate-y-0 opacity-100"
               }`}
             >
               These terms govern your use of our cloud-based software solutions and
@@ -140,7 +141,7 @@ export default function TermsConditionsPage() {
 
             <span
               className={`text-gray-700 font-semibold inline-block transition-all duration-1000 delay-700 ${
-                isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                isVisible ? "translate-y-0 opacity-100" : "translate-y-0 opacity-100"
               }`}
             >
               Effective Date: January 1, 2024
@@ -148,7 +149,6 @@ export default function TermsConditionsPage() {
           </div>
         </div>
       </section>
-
 
       {/* Main Terms Sections */}
       <section className="py-20">
@@ -246,8 +246,8 @@ export default function TermsConditionsPage() {
             </p>
           </div>
 
-          <a href="mailto:support@homeideastech.com" target='_blank'>
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            {/* Fixed Email Card - Remove Link wrapper, use only the anchor inside */}
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <div className="flex items-center mb-6">
                 <Mail className="w-8 h-8 text-orange-500 mr-3" />
@@ -261,8 +261,8 @@ export default function TermsConditionsPage() {
               </a>
             </div>
 
-            <a href="tel:+917200240860">
-              <div className="bg-white rounded-2xl p-8 shadow-lg">
+            {/* Fixed Phone Card - Remove Link wrapper, use only the anchor inside */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
               <div className="flex items-center mb-6">
                 <Phone className="w-8 h-8 text-orange-500 mr-3" />
                 <div>
@@ -274,12 +274,10 @@ export default function TermsConditionsPage() {
                 +91 72002 40860
               </a>
             </div>
-            </a>
           </div>
-          </a>
 
-          <a href="https://maps.app.goo.gl/JU9XXXdJoKhLH2N76" target='_blank'>
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+          {/* Fixed Address Card - Remove Link wrapper, use only the anchor inside */}
+          <div className="bg-white rounded-2xl p-8 shadow-lg">
             <div className="flex items-center mb-6">
               <MapPin className="w-8 h-8 text-orange-500 mr-3" />
               <div>
@@ -288,26 +286,19 @@ export default function TermsConditionsPage() {
               </div>
             </div>
             <address className="text-gray-600 not-italic">
-              Home Ideas Technologies<br />
-              102, 20, Eden Park, Vittal Mallya Rd, KG Halli, D' Souza Layout,<br />
-               Ashok Nagar, Bengaluru, Karnataka - 560001,<br />
-              India
+              <a 
+                href="https://maps.app.goo.gl/JU9XXXdJoKhLH2N76" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-orange-500 transition-colors"
+              >
+                Home Ideas Technologies<br />
+                102, 20, Eden Park, Vittal Mallya Rd, KG Halli, D' Souza Layout,<br />
+                Ashok Nagar, Bengaluru, Karnataka - 560001,<br />
+                India
+              </a>
             </address>
           </div>
-          </a>
-
-          {/* <div className="mt-12 text-center">
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Need Support?</h3>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                If you need clarification on any terms or have questions about using our services, 
-                our support team is available to assist you. We're committed to transparency and providing excellent service.
-              </p>
-              <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-                Contact Support Team
-              </button>
-            </div>
-          </div> */}
         </div>
       </section>
       <Footer />
