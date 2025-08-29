@@ -235,7 +235,7 @@ export default function PrivacyPolicyPage() {
             </a>
           </div>
 
-          <div className="mt-12 text-center">
+          {/* <div className="mt-12 text-center">
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Data Protection Rights</h3>
               <p className="text-gray-600 leading-relaxed">
@@ -246,7 +246,7 @@ export default function PrivacyPolicyPage() {
                 Contact Privacy Team
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
       <Footer />
