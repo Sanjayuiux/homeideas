@@ -38,7 +38,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1
-                className={`font-bold text-gray-900 mb-6 transition-all duration-1000 delay-300 ${
+                className={`font-bold text-gray-900 mb-6 transition-all duration-1000 delay-100 ${
                   isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                 }`}
               >
@@ -49,7 +49,7 @@ export default function HomePage() {
                   Home Tech Apps
                 </span> */}
               </h1>
-              <p className={`text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+              <p className={`text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                 Transforming the home and furnishing industry with AI-powered visualization tools, digital marketplaces, and professional networking platforms.
               </p>
               {/* <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>

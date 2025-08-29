@@ -73,7 +73,7 @@
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center">
                 <h1
-                  className={`font-bold text-gray-900 mb-6 transition-all duration-1000 delay-300 ${
+                  className={`font-bold text-gray-900 mb-6 transition-all duration-1000 delay-100 ${
                     isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                   }`}
                 >
@@ -84,10 +84,10 @@
                     Home Tech Apps
                   </span>
                 </h1>
-                <p className={`text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+                <p className={`text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                   Unlock business potential with cutting-edge solutions that are designed to make your workflow smarter, faster, and more efficient than ever before.
                 </p>
-                <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+                <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                   <Link 
                   href="/contact-us"
                   className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center">

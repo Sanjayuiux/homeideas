@@ -107,34 +107,34 @@ export default function PrivacyPolicyPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1
-              className={`font-bold text-gray-900 mb-6 transition-all duration-1000 delay-300 ${
-                isLoaded ? "translate-y-0 opacity-100" : "translate-y-0 opacity-100"
-              }`}
-            >
-              <span className="block text-[50px] leading-tight">
-                Privacy Policy
-              </span>
-              <span className="block text-[32px] leading-tight text-[#B59F0E]">
-                Your Data, Our Commitment
-              </span>
-            </h1>
+                className={`font-bold text-gray-900 mb-6 transition-all duration-1000 delay-100 ${
+                  isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                }`}
+              >
+                <span className="block text-[50px] leading-tight">
+                  Privacy Policy
+                </span>
+                <span className="block text-[32px] leading-tight text-[#B59F0E]">
+                  Your Data, Our Commitment
+                </span>
+              </h1>
 
-            <p
-              className={`text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${
-                isLoaded ? "translate-y-0 opacity-100" : "translate-y-0 opacity-100"
-              }`}
-            >
-              We are committed to protecting your privacy and ensuring the security
-              of your personal information.
-            </p>
+              <p
+                className={`text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-200 ${
+                  isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                }`}
+              >
+                We are committed to protecting your privacy and ensuring the security
+                of your personal information.
+              </p>
 
-            <span
-              className={`text-gray-700 font-semibold inline-block transition-all duration-1000 delay-700 ${
-                isLoaded ? "translate-y-0 opacity-100" : "translate-y-0 opacity-100"
-              }`}
-            >
-              Effective Date: January 1, 2024
-            </span>
+              <span
+                className={`text-gray-700 font-semibold inline-block transition-all duration-1000 delay-300 ${
+                  isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                }`}
+              >
+                Effective Date: January 1, 2024
+              </span>
           </div>
         </div>
       </section>

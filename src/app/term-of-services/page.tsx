@@ -6,10 +6,16 @@ import Footer from '../components/Footer'
 import Link from 'next/link'
 
 export default function TermsConditionsPage() {
-  const [isVisible, setIsVisible] = useState(true) // Fix hydration issue
+  const [isVisible, setIsVisible] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setIsVisible(true)
+    setMounted(true)
+    // Small delay to ensure smooth animation after hydration
+    const timer = setTimeout(() => {
+      setIsVisible(true)
+    }, 100)
+    return () => clearTimeout(timer)
   }, [])
 
   const termsSections = [
@@ -115,15 +121,15 @@ export default function TermsConditionsPage() {
           <div className="text-center">
             <h1 className="font-bold text-gray-900 mb-6">
               <span
-                className={`block text-[50px] leading-tight transition-all duration-1000 delay-300 ${
-                  isVisible ? "translate-y-0 opacity-100" : "translate-y-0 opacity-100"
+                className={`block text-[50px] leading-tight transition-all duration-1000 delay-100 ${
+                  mounted && isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                 }`}
               >
                 Terms of Service
               </span>
               <span
-                className={`block text-[32px] leading-tight text-[#B59F0E] transition-all duration-1000 delay-500 ${
-                  isVisible ? "translate-y-0 opacity-100" : "translate-y-0 opacity-100"
+                className={`block text-[32px] leading-tight text-[#B59F0E] transition-all duration-1000 delay-200 ${
+                  mounted && isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                 }`}
               >
                 Your Agreement with Us
@@ -131,8 +137,8 @@ export default function TermsConditionsPage() {
             </h1>
 
             <p
-              className={`text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-700 ${
-                isVisible ? "translate-y-0 opacity-100" : "translate-y-0 opacity-100"
+              className={`text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-300 ${
+                mounted && isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
               }`}
             >
               These terms govern your use of our cloud-based software solutions and
@@ -141,7 +147,7 @@ export default function TermsConditionsPage() {
 
             <span
               className={`text-gray-700 font-semibold inline-block transition-all duration-1000 delay-700 ${
-                isVisible ? "translate-y-0 opacity-100" : "translate-y-0 opacity-100"
+                mounted && isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
               }`}
             >
               Effective Date: January 1, 2024
