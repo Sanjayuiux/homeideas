@@ -215,7 +215,11 @@
                     <div className="relative flex items-center justify-center h-[300px] sm:h-[400px] lg:h-[600px]">
                       {/* Central Hub */}
                       <div className="relative z-10 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white rounded-xl flex items-center justify-center shadow-lg">
-                        <Zap className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-yellow-500" />
+                        <img 
+                          src="/assets/images/hi-logo.svg" 
+                          alt="Logo" 
+                          className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 object-contain"
+                        />
                       </div>
             
                       {/* Dashed Orbit Rings */}
