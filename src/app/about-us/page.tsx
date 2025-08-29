@@ -295,37 +295,39 @@ export default function HomePage() {
         </section>
         
         {/* CTA Section */}
-        <section className="py-20 " id='contact'>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid lg:grid-cols-2 gap-16 items-center">
-                <div className="space-y-6">
-                  <h2 className="text-4xl md:text-5xl font-bold text-black">
-                    Join the Future of Home Tech
-                  </h2>
-                  <p className="text-xl text-black/40">
-                    Ready to transform your business with our innovative solutions? Get started today and experience the difference.
-                  </p>
-                  <div className="flex gap-4">
-                    <Link 
+        <section className="py-20" id="contact">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              
+              {/* Left content (first on all screens, left on desktop) */}
+              <div className="space-y-6 order-1 lg:order-1 text-center md:text-center lg:text-left flex flex-col items-center lg:items-start">
+                <h2 className="text-4xl md:text-5xl font-bold text-black">
+                  Join the Future of Home Tech
+                </h2>
+                <p className="text-xl text-black/40 max-w-2xl">
+                  Ready to transform your business with our innovative solutions? Get started today and experience the difference.
+                </p>
+                <div className="flex gap-4 justify-center lg:justify-start">
+                  <Link
                     href="/contact-us"
-                    className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-                      Contact Us
-                    </Link>
-                    {/* <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold border-2 border-gray-200 hover:border-gray-300 transition-colors">
-                      Contact Us
-                    </button> */}
-                  </div>
+                    className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+                  >
+                    Contact Us
+                  </Link>
                 </div>
-                <div className="relative">
-                  <div className="w-full object-cover h-full bg-gray-700 rounded-2xl flex items-center justify-center">
-                    <div className="text-6xl">
-                      <img src='/assets/images/cta.jpg' className='rounded-[18px]'/>
-                    </div>
+              </div>
+
+              {/* Right image (below content on mobile, right on desktop) */}
+              <div className="relative order-2 lg:order-2 flex justify-center lg:justify-end">
+                <div className="w-full object-cover h-full rounded-2xl flex items-center justify-center">
+                  <div className="text-6xl">
+                    <img src="/assets/images/cta.jpg" alt="Call to Action" className="rounded-[18px]" />
                   </div>
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
         <Footer/>
       </div>
