@@ -220,8 +220,8 @@ export default function PrivacyPolicyPage() {
                   <p className="text-gray-600">For privacy-related inquiries</p>
                 </div>
               </div>
-              <a href="mailto:privacy@homeideastech.com" className="text-orange-500 font-semibold hover:text-orange-600 transition-colors">
-                privacy@homeideastech.com
+              <a href="mailto:admin@homeideastechnologies.com" className="text-orange-500 font-semibold hover:text-orange-600 transition-colors">
+                admin@homeideastechnologies.com
               </a>
             </div>
 
