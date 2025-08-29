@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { usePathname } from "next/navigation"; // ✅ for active route
+import Link from "next/link";
 
 export default function Navigation() {
   const [isVisible, setIsVisible] = useState(true);
@@ -67,9 +68,13 @@ export default function Navigation() {
 
             {/* Desktop Get Started Button */}
             <div className="hidden md:block">
-              <button className="bg-gray-900 text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors">
-                Get Started
-              </button>
+              <Link
+                href="tel:+917200240860"
+                className="flex items-center gap-2 bg-gray-900 text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors"
+              >
+                <Phone size={14} />  {/* ✅ Call icon */}
+                Contact Us
+              </Link>
             </div>
 
             {/* Mobile Hamburger Menu */}
@@ -88,7 +93,7 @@ export default function Navigation() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-md border-t border-gray-100">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-md border-t border-gray-100 flex flex-col items-center">
               {links.map((link) => {
                 const isActive = normalizePath(pathname) === link.href;
 
@@ -109,12 +114,14 @@ export default function Navigation() {
               })}
 
               <div className="pt-2">
-                <button
+                <Link
+                  href="tel:+917200240860"
                   onClick={closeMobileMenu}
-                  className="w-full bg-gray-900 text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors"
+                  className="flex items-center gap-3 !w-fit bg-gray-900 text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors"
                 >
-                  Get Started
-                </button>
+                  <Phone size={16} />
+                  Contact Us 
+                </Link>
               </div>
             </div>
           </div>
