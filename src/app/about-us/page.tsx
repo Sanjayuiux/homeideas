@@ -66,7 +66,31 @@ export default function HomePage() {
         </section>
 
         {/* Who we are */}
-        <section className="py-20" id='about'>
+        <section className="py-20" id="about">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid lg:grid-cols-2 gap-16 items-center">
+      
+      {/* Left content (first on mobile, left on desktop) */}
+      <div className="space-y-6 order-1 lg:order-1 text-center md:text-center lg:text-left flex flex-col items-center lg:items-start">
+        <div className="relative inline-block">
+          <h2 className="relative z-10 text-4xl md:text-5xl font-bold text-gray-900">
+            Who We Are
+          </h2>
+        </div>
+
+        <p className="text-gray-600 leading-relaxed max-w-2xl">
+          Home Ideas Technologies is a Bangalore-based innovation company transforming the home and furnishing industry with AI-powered visualization tools, digital marketplaces, and professional networking platforms. Our mission is to bridge the gap between end customers, shop owners, and professionals by providing smart software solutions that make designing, sourcing, and executing home projects easier, faster, and more transparent.
+        </p>
+      </div>
+
+      {/* Right image (below text on mobile, right on desktop) */}
+      <div className="relative order-2 lg:order-2 h-[300px] md:h-[400px] lg:h-[450px] overflow-hidden rounded-[20px] flex justify-center lg:justify-end">
+        <img
+          src="/assets/images/about_us/about_us_1.png"
+          alt="About Us"
+          className="absolute inset-0 w-full h-full object-cover object-top rounded-[20px]"
+        />
+      </div><section className="py-20" id='about'>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="space-y-6">
