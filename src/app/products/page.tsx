@@ -223,7 +223,19 @@ const ProductsPage = () => {
 
             {/* Homeideas CRM */}
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="space-y-6">
+              {/* Image First in mobile/tab, second in desktop */}
+              <div className="relative order-1 lg:order-2">
+                <div className="w-full h-96 rounded-2xl flex items-center justify-center overflow-hidden">
+                  <img
+                    src="/assets/images/products/product_2.jpg"
+                    alt="Product"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Content Second in mobile/tab, first in desktop */}
+              <div className="space-y-6 order-2 lg:order-1">
                 <div className="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">
                   Innovative
                 </div>
@@ -235,28 +247,11 @@ const ProductsPage = () => {
                 </p>
 
                 <div className="flex gap-4">
-                  {/* <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold border-2 border-gray-200 hover:border-gray-300 transition-colors">
-                    Get Started
-                  </button> */}
                   <button className="bg-gray-100 text-gray-600 px-6 py-3 rounded-full font-semibold">
                     Coming Soon
                   </button>
-                  {/* <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center">
-                    Learn More <ArrowRight className="ml-2 w-4 h-4" />
-                  </button> */}
                 </div>
               </div>
-
-                <div className="relative">
-                  <div className="w-full h-96 rounded-2xl flex items-center justify-center overflow-hidden">
-                    <img
-                      src="/assets/images/products/product_2.jpg"
-                      alt="Product"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-
             </div>
           </div>
         </div>
