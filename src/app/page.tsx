@@ -142,7 +142,7 @@
 
 
           {/* Innovation Section */}
-          <section className="py-20 ">
+          <section className="py-10 lg:py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid lg:grid-cols-2 gap-16 items-center">
                 <div className="relative">
@@ -305,20 +305,20 @@
               }
             ].map((item, index) => (
               <div key={index} className="group h-full">
-                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full">
+                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all  duration-300 transform hover:-translate-y-2 flex flex-col gap-3 h-full">
                   {/* Image section */}
-                  <div className="w-full h-48 bg-gray-100 rounded-xl flex items-center justify-center mb-6">
+                  <div className="w-full h-48 rounded-xl mb-2 md:mb-0 lg:mb-6  flex items-center justify-center ">
                     <img src={item.image} alt={item.title} className="rounded-xl"/>
                   </div>
 
                   {/* Text content */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-500 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900  group-hover:text-orange-500 transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 flex-grow">{item.description}</p>
+                  <p className="text-gray-600  flex-grow">{item.description}</p>
 
                   {/* Button stays at bottom */}
-                  <button className="text-orange-500 font-semibold hover:text-orange-600 transition-colors mt-auto">
+                  <button className="text-orange-500 font-semibold hover:text-orange-600 transition-colors mt-auto text-left">
                     Learn More →
                   </button>
                 </div>
@@ -330,7 +330,7 @@
 
 
           {/* Enhance Section */}
-          <section className="py-20 bg-gray-50">
+          <section className="pt-10 lg:py-20 bg-gray-50">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16 flex flex-col items-center gap-3">
         <div className="relative inline-block">
