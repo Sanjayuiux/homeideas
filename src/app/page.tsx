@@ -223,10 +223,9 @@
                         className="absolute w-[180px] h-[180px] sm:w-[250px] sm:h-[250px] lg:w-[310px] lg:h-[310px] rounded-full border-2 border-dashed border-[#544A07]"
                       ></div>
                       <div
-                        className="absolute w-[240px] h-[240px] sm:w-[350px] sm:h-[350px] lg:w-[490px] lg:h-[490px] rounded-full border-2 border-dashed border-[#544A07]"
+                        className="absolute w-[290px] h-[290px] sm:w-[390px] sm:h-[390px] lg:w-[490px] lg:h-[490px] rounded-full border-2 border-dashed border-[#544A07]"
                       ></div>
             
-                      {/* Orbiting Icons */}
                       {orbitingIcons.map((planet: OrbitingIcon, index: number) => {
                         const IconComponent = planet.icon;
                         
@@ -236,11 +235,15 @@
                         
                         let initialRotation = 0;
                         if (planet.position === 'inner') {
+                          // FOR INNER ICONS: Position them in plus structure (N, E, S, W)
                           const innerIndex = innerIcons.findIndex(p => p === planet);
-                          initialRotation = (innerIndex * 360 / innerIcons.length);
+                          const plusPositions = [0, 90, 180, 270]; // N, E, S, W positions
+                          initialRotation = plusPositions[innerIndex % plusPositions.length];
                         } else {
+                          // FOR OUTER ICONS: Position them in diagonal positions (NE, SE, SW, NW)
                           const outerIndex = outerIcons.findIndex(p => p === planet);
-                          initialRotation = (outerIndex * 360 / outerIcons.length);
+                          const diagonalPositions = [45, 135, 225, 315]; // NE, SE, SW, NW positions
+                          initialRotation = diagonalPositions[outerIndex % diagonalPositions.length];
                         }
                         
                         return (
