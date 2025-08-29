@@ -66,22 +66,17 @@ export default function HomePage() {
         </section>
 
         {/* Who we are */}
-        <section className="py-20" id='about'>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="space-y-6">
-                <div className="relative inline-block">
-                  <h2 className="relative z-10 text-4xl md:text-5xl font-bold text-gray-900">
-                    Who We Are
-                  </h2>
-                  {/* underline brush vector
-                  <img
-                    src="/assets/icons/underline.svg"
-                    alt="underline"
-                    className="absolute -bottom-4 left-0 w-[220px] md:w-[260px] -z-0"
-                    // style={{ filter: 'brightness(0) saturate(100%) invert(92%) sepia(30%) saturate(633%) hue-rotate(358deg) brightness(103%) contrast(104%)' }}
-                  /> */}
-                </div>
+        <section className="py-20" id="about">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid lg:grid-cols-2 gap-16 items-center">
+      
+      {/* Left content (first on mobile, left on desktop) */}
+      <div className="space-y-6 order-1 lg:order-1 text-center md:text-center lg:text-left flex flex-col items-center lg:items-start">
+        <div className="relative inline-block">
+          <h2 className="relative z-10 text-4xl md:text-5xl font-bold text-gray-900">
+            Who We Are
+          </h2>
+        </div>
 
         <p className="text-gray-600 leading-relaxed max-w-2xl">
           Home Ideas Technologies is a Bangalore-based innovation company transforming the home and furnishing industry with AI-powered visualization tools, digital marketplaces, and professional networking platforms. Our mission is to bridge the gap between end customers, shop owners, and professionals by providing smart software solutions that make designing, sourcing, and executing home projects easier, faster, and more transparent.
@@ -99,6 +94,7 @@ export default function HomePage() {
     </div>
   </div>
 </section>
+
 
 
         
