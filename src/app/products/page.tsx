@@ -192,23 +192,23 @@ const ProductsPage = () => {
                   HIT FURNITURE™ is an innovative app tailored for architects and interior designers. It streamlines the design process, enabling seamless collaboration and presentation of ideas.
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-3">
+                <div className="grid md:grid-cols-1 gap-3">
+                  <div className="flex items-center gap-3">
+                    {/* Icon box */}
                     <div className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center">
-                      <Target className="w-5 h-5 text-white" />
+                      <Target className="w-5 h-5 text-white flex-shrink-0" />
                     </div>
-                    <h4 className="font-bold text-gray-900">Design Simplified</h4>
-                    <p className="text-gray-600 text-sm">Visualize your designs and collaborate effortlessly with clients in real-time.</p>
-                  </div>
-                  
-                  <div className="space-y-3">
-                    <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
-                      <Star className="w-5 h-5 text-white" />
+
+                    {/* Text box (centered vertically) */}
+                    <div className="flex flex-col justify-center">
+                      <h4 className="font-bold text-gray-900">Design Simplified</h4>
+                      <p className="text-gray-600 text-sm">
+                        Visualize your designs and collaborate effortlessly with clients in real-time.
+                      </p>
                     </div>
-                    <h4 className="font-bold text-gray-900">Coming Soon</h4>
-                    <p className="text-gray-600 text-sm">Stay tuned for the launch and elevate your design experience.</p>
                   </div>
                 </div>
+
 
                 <div className="flex gap-4">
                   <button className="bg-gray-100 text-gray-600 px-6 py-3 rounded-full font-semibold">
